@@ -3,7 +3,7 @@ package net.soy.algorithm.level2.stack_queue.printer
 import java.util.*
 
 /**
- * Class: printer
+ * Class: Solution
  * Created by leesoyoung on 2020/06/01.
  *
  * Description: 프로그래머스 코딩테스트 연습 level2 스택/큐 "프린터" 문제

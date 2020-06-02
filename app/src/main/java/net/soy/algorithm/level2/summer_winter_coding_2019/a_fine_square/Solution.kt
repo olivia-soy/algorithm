@@ -1,9 +1,9 @@
 package net.soy.algorithm.level2.summer_winter_coding_2019.a_fine_square
 
-import java.util.*
+import android.util.Log
 
 /**
- * Class: printer
+ * Class: Solution
  * Created by leesoyoung on 2020/06/01.
  *
  * Description: 프로그래머스 코딩테스트 연습 level2 Summer/Winter Coding(2019) "멀쩡한 사각형"
@@ -24,7 +24,10 @@ class Solution {
 
 
     fun solution(w: Int, h: Int): Long {
-        return w*h - (w + h - gcd(w.toLong(), h.toLong()))
+        val longW = w.toLong()
+        val longH = h.toLong()
+
+        return longW*longH - (longW + longH - gcd(maxOf(longW, longH), minOf(longW, longH)))
     }
 
     /**
@@ -32,7 +35,7 @@ class Solution {
      *  큰수를 작은 값으로 나눈 값이 0일 경우 작은값이 최대 공약수
      *  아닐경우 변경하여 과정을 반복하면 된다
      */
-    fun gcd(a: Long, b: Long): Long{
-        return if( b == 0L) a else gcd(b, a%b)
+    private fun gcd(max: Long, min: Long): Long{
+        return if( min == 0L) max else gcd(min, max%min)
     }
 }

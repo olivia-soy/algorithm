@@ -2,7 +2,7 @@ package net.soy.algorithm.level2.sort.max
 
 /**
  * Class: Solution
- * Created by leesoyoung on 2020/06/01.
+ * Created by leesoyoung on 2020/06/02.
  *
  * Description: 프로그래머스 코딩테스트 연습 level2 정렬 "가장 큰 수" 문제
  */

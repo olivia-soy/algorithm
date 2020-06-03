@@ -26,17 +26,13 @@ class Solution {
         //{"이름","종류"} 형식으로 리스트가 전달되기 때문에 종류별 갯수를 파악하기 위해 component2로 groupBy를 실행한다
         val clothesKinds = clothes.groupBy { it.component2() }
 
-        //종류 : {"1", "2", "3"} 형식의 map에서 종류별 리스트의 size + 1 을 저장한다
-        var clothesKindsSizes = clothesKinds.keys.map {
+        /**
+         * 종류별 리스트의 원소 + 1 을 한 뒤
+         * 모든 원소를 곱하고(reduce 함수 사용) -1 을 해준다
+         */
+        return clothesKinds.keys.map {
             clothesKinds[it]!!.size.plus(1)
-        }
-        // 각 원소를 곱한다
-        var answer = 1
-        clothesKindsSizes.forEach {
-            answer *= it
-        }
+        }.reduce { t1, t2 -> t1 * t2}.minus(1)
 
-        // 전체를 안입는 경우를 빼면 정답이 된다.
-        return answer.minus(1)
     }
 }

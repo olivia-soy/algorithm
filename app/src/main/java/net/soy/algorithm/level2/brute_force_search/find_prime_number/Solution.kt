@@ -1,11 +1,8 @@
 package net.soy.algorithm.level2.brute_force_search.find_prime_number
 
-import java.lang.Math.pow
-import kotlin.math.sqrt
-
 /**
  * Class: Solution
- * Created by leesoyoung on 2020/06/04.
+ * Created by leesoyoung on 2020/06/05.
  *
  * Description: 프로그래머스 코딩테스트 연습 level2 완전탐색 "소수 찾기" 문제
  */

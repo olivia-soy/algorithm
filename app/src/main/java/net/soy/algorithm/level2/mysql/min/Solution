@@ -1,0 +1,1 @@
+SELECT min(datetime) as time from ANIMAL_INS

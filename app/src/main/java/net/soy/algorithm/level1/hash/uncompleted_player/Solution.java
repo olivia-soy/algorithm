@@ -1,4 +1,4 @@
-package net.soy.algorithm.level2.hash.uncompleted_player;
+package net.soy.algorithm.level1.hash.uncompleted_player;
 
 import java.util.HashMap;
 

@@ -1,0 +1,8 @@
+
+/**
+ * Class: Solution
+ * Created by leesoyoung on 2020/06/10.
+ *
+ * Description: 프로그래머스 코딩테스트 연습 sql level1 SELECT "모든 레코드 조회하기" 문제
+ */
+SELECT *FROM ANIMAL_INS ORDER BY ANIMAL_INS.ANIMAL_ID ASC

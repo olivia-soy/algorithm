@@ -13,5 +13,7 @@ class Solution {
             answer += a[aIndex] * b[aIndex]
         }
         return answer
+
+        //return a.zip(b).map { it.first * it.second }.sum()
     }
 }

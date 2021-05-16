@@ -1,4 +1,4 @@
-package net.soy.algorithm.monthlycodechallenge.season1.internal
+package net.soy.algorithm.level1.monthlycodechallenge.season1.internal
 
 /**
  * Class: Solution

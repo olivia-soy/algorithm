@@ -1,5 +1,7 @@
 package net.soy.algorithm.level1.kakaointern.keypad
 
+import kotlin.math.hypot
+
 /**
  * Class: Solution
  * Created by leesoyoung on 2021/05/17.
@@ -9,16 +11,83 @@ package net.soy.algorithm.level1.kakaointern.keypad
  */
 class Solution {
     fun solution(numbers: IntArray, hand: String): String {
-        val LEFT = "tledfft"
-        val leftArray = intArrayOf(1, 4, 7)
-        val RIGHT = "right"
-        val rightArray = intArrayOf(3, 6, 9)
-
-        val numbers = intArrayOf(1, 3, 4, 5, 8, 2, 1, 4, 5, 9, 5)
-        val hand = "right"
-
         var answer = ""
+        val leftArray = intArrayOf(1, 4, 7)
+        val rightArray = intArrayOf(3, 6, 9)
+        var leftPosition: Any = "*"
+        var rightPosition: Any = "#"
 
+        val array = intArrayOf(1, 2, 3)
+        numbers.forEach {
+            when {
+                leftArray.contains(it) -> {
+                    answer += "L"
+                    leftPosition = it
+                }
+                rightArray.contains(it) -> {
+                    answer += "R"
+                    rightPosition = it
+                }
+                else -> {
+                    val numLocation = it.convertToLocation()
+                    val leftDistance = leftPosition.convertToLocation().distance(numLocation)
+                    val rightDistance = rightPosition.convertToLocation().distance(numLocation)
+                    when {
+                        leftDistance > rightDistance -> {
+                            answer += "R"
+                            rightPosition = it
+                        }
+                        leftDistance < rightDistance -> {
+                            answer += "L"
+                            leftPosition = it
+                        }
+                        leftDistance == rightDistance -> {
+                            when (hand) {
+                                "left" -> {
+                                    answer += "L"
+                                    leftPosition = it
+                                }
+                                else -> {
+                                    answer += "R"
+                                    rightPosition = it
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         return answer
     }
+
+    /**
+     * 키패트를 좌표로 변환
+     */
+    private fun Any.convertToLocation(): Pair<Int, Int> {
+        return when (this) {
+            1 -> Pair(0, 3)
+            2 -> Pair(1, 3)
+            3 -> Pair(2, 3)
+            4 -> Pair(0, 2)
+            5 -> Pair(1, 2)
+            6 -> Pair(2, 2)
+            7 -> Pair(0, 1)
+            8 -> Pair(1, 1)
+            9 -> Pair(2, 1)
+            "*" -> Pair(0, 0)
+            0 -> Pair(1, 0)
+            "#" -> Pair(2, 0)
+            else -> Pair(-1, -1)
+        }
+    }
+
+    /**
+     * 두 좌표사이의 거리를 구함
+     *
+     * hypot -> 2차원 좌표상 두점 사이 거리를  구할 때 사용되는 함수
+     *
+     * ((this.first - pair.first)제곱  + (this.second - pair.second)제곱)의 제곱근
+     */
+    private fun Pair<Int, Int>.distance(pair: Pair<Int, Int>): Double =
+        hypot((this.first - pair.first).toDouble(), (this.second - pair.second).toDouble())
 }

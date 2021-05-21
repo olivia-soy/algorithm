@@ -16,7 +16,7 @@ import kotlin.math.sqrt
 class SolutionTest {
 
     @Test
-    fun solution() {
+    fun keypadSolutionTest() {
         var numbers: IntArray = intArrayOf(1, 3, 4, 5, 8, 2, 1, 4, 5, 9, 5)
         var answer = ""
         val LEFT = "left"
@@ -71,11 +71,6 @@ class SolutionTest {
         println(answer)
     }
 
-    @Test
-    fun DistanceTest() {
-
-    }
-
     fun Any.convertToLocation(): Pair<Int, Int> {
         return when (this) {
             1 -> Pair(0, 3)
@@ -94,8 +89,8 @@ class SolutionTest {
         }
     }
 
-
-    fun Pair<Int, Int>.distance(pair: Pair<Int, Int>): Double =
-        hypot((this.first - pair.first).toDouble(), (this.second - pair.second).toDouble())
+    private fun Pair<Int, Int>.distance(pair: Pair<Int, Int>): Int {
+        return kotlin.math.abs(this.first - pair.first) + kotlin.math.abs(this.second - pair.second)
+    }
 }
 

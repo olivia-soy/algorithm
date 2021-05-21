@@ -1,12 +1,17 @@
 package net.soy.algorithm.level1.kakaointern.keypad
 
-import kotlin.math.hypot
-
 /**
  * Class: Solution
  * Created by leesoyoung on 2021/05/17.
  *
  * Description: 프로그래머스 코딩테스트 연습 2020 카카오 인턴십 키패드 누르기
+ *
+ * 두 점사이의 거리를 구하는 문제가 아닌건가?
+ * hypot 를 사용하는게 아니고 abs를 통해 절대 값을 구하는 문제 이다 왜징?...
+ *
+ * ypot -> 2차원 좌표상 두점 사이 거리를  구할 때 사용되는 함수
+ *
+ * ((this.first - pair.first)제곱  + (this.second - pair.second)제곱)의 제곱근
  *
  */
 class Solution {
@@ -82,12 +87,9 @@ class Solution {
     }
 
     /**
-     * 두 좌표사이의 거리를 구함
-     *
-     * hypot -> 2차원 좌표상 두점 사이 거리를  구할 때 사용되는 함수
-     *
-     * ((this.first - pair.first)제곱  + (this.second - pair.second)제곱)의 제곱근
+     * 절대값을 구함
      */
-    private fun Pair<Int, Int>.distance(pair: Pair<Int, Int>): Double =
-        hypot((this.first - pair.first).toDouble(), (this.second - pair.second).toDouble())
+    private fun Pair<Int, Int>.distance(pair: Pair<Int, Int>): Int {
+        return kotlin.math.abs(this.first - pair.first) + kotlin.math.abs(this.second - pair.second)
+    }
 }

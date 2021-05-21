@@ -92,5 +92,36 @@ class SolutionTest {
     private fun Pair<Int, Int>.distance(pair: Pair<Int, Int>): Int {
         return kotlin.math.abs(this.first - pair.first) + kotlin.math.abs(this.second - pair.second)
     }
+
+
+    @Test
+    fun practiceTestSolutionTest() {
+        val answers = intArrayOf()
+        val firstAnswers = arrayListOf(1, 2, 3, 4, 5)
+        val secondAnswers = arrayListOf(2, 1, 2, 3, 2, 4, 2, 5)
+        val thirdAnswers = arrayListOf(3, 3, 1, 1, 2, 2, 4, 4, 5, 5)
+
+        val firstAnswersCount = 0
+        val secondAnswersCount = 0
+        val thirdAnswersCount = 0
+
+        answers.forEachIndexed { index, answer ->
+            if (answer == firstAnswers[index]) {
+                firstAnswersCount.plus(1)
+            }
+
+            if (answer == secondAnswers[index]) {
+                secondAnswersCount.plus(1)
+            }
+
+            if (answer == thirdAnswers[index]) {
+                thirdAnswersCount.plus(1)
+            }
+        }
+
+
+        val answer = intArrayOf(firstAnswersCount, secondAnswersCount, thirdAnswersCount)
+        println(answer.maxOrNull())
+    }
 }
 

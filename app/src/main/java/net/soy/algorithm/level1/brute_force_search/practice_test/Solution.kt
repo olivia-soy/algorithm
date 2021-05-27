@@ -10,27 +10,48 @@ class Solution {
     fun solution(answers: IntArray): IntArray {
         val firstAnswers = arrayListOf(1, 2, 3, 4, 5)
         val secondAnswers = arrayListOf(2, 1, 2, 3, 2, 4, 2, 5)
-        val thirdAnswers = arrayListOf(3, 3, 1, 1, 2, 2, 4, 4,5, 5)
+        val thirdAnswers = arrayListOf(3, 3, 1, 1, 2, 2, 4, 4, 5, 5)
 
-        val firstAnswersCount = 0
-        val secondAnswersCount = 0
-        val thirdAnswersCount = 0
+        var firstAnswersCount = 0
+        var secondAnswersCount = 0
+        var thirdAnswersCount = 0
+
 
         answers.forEachIndexed { index, answer ->
-            if (answer == firstAnswers[index]) {
-                firstAnswersCount.plus(1)
+            if (firstAnswers[index % firstAnswers.size] == answers[index]) {
+                firstAnswersCount += 1
             }
 
-            if (answer == secondAnswers[index]) {
-                secondAnswersCount.plus(1)
+            if (secondAnswers[index % secondAnswers.size] == answers[index]) {
+                secondAnswersCount += 1
             }
 
-            if (answer == thirdAnswers[index]) {
-                thirdAnswersCount.plus(1)
+            if (thirdAnswers[index % thirdAnswers.size] == answers[index]) {
+                thirdAnswersCount += 1
             }
         }
-        var answer = intArrayOf(firstAnswersCount, secondAnswersCount, thirdAnswersCount)
-        answer.maxOrNull()
-        return answer
+
+
+        val answerList = intArrayOf(firstAnswersCount, secondAnswersCount, thirdAnswersCount)
+        var max = answerList[0]
+        for (i in 1..answerList.lastIndex) {
+            val e = answerList[i]
+            if (max < e) max = e
+        }
+
+        val answer = arrayListOf<Int>()
+        if(max == firstAnswersCount){
+            answer.add(1)
+        }
+
+        if(max == secondAnswersCount){
+            answer.add(2)
+        }
+
+        if(max == thirdAnswersCount){
+            answer.add(3)
+        }
+
+        return answer.toIntArray()
     }
 }

@@ -1,28 +1,33 @@
-package net.soy.algorithm.level1.kakaointern.keypad
+package net.soy.algorithm
+
+import org.junit.Test
+
+import org.junit.Assert.*
+import kotlin.math.abs
+import kotlin.math.hypot
+import kotlin.math.pow
+import kotlin.math.sqrt
 
 /**
- * Class: Solution
- * Created by leesoyoung on 2021/05/17.
+ * Example local unit test, which will execute on the development machine (host).
  *
- * Description: 프로그래머스 코딩테스트 연습 2020 카카오 인턴십 키패드 누르기
- *
- * 두 점사이의 거리를 구하는 문제가 아닌건가?
- * hypot 를 사용하는게 아니고 abs를 통해 절대 값을 구하는 문제 이다 왜징?...
- *
- * ypot -> 2차원 좌표상 두점 사이 거리를  구할 때 사용되는 함수
- *
- * ((this.first - pair.first)제곱  + (this.second - pair.second)제곱)의 제곱근
- *
+ * See [testing documentation](http://d.android.com/tools/testing).
  */
-class Solution {
-    fun solution(numbers: IntArray, hand: String): String {
+class SolutionTest {
+
+    @Test
+    fun keypadSolutionTest() {
+        var numbers: IntArray = intArrayOf(1, 3, 4, 5, 8, 2, 1, 4, 5, 9, 5)
         var answer = ""
+        val LEFT = "left"
         val leftArray = intArrayOf(1, 4, 7)
+        val RIGHT = "right"
+        val hand = "right"
         val rightArray = intArrayOf(3, 6, 9)
         var leftPosition: Any = "*"
         var rightPosition: Any = "#"
 
-        val array = intArrayOf(1, 2, 3)
+
         numbers.forEach {
             when {
                 leftArray.contains(it) -> {
@@ -48,7 +53,7 @@ class Solution {
                         }
                         leftDistance == rightDistance -> {
                             when (hand) {
-                                "left" -> {
+                                LEFT -> {
                                     answer += "L"
                                     leftPosition = it
                                 }
@@ -62,13 +67,11 @@ class Solution {
                 }
             }
         }
-        return answer
+
+        println(answer)
     }
 
-    /**
-     * 키패트를 좌표로 변환
-     */
-    private fun Any.convertToLocation(): Pair<Int, Int> {
+    fun Any.convertToLocation(): Pair<Int, Int> {
         return when (this) {
             1 -> Pair(0, 3)
             2 -> Pair(1, 3)
@@ -86,10 +89,59 @@ class Solution {
         }
     }
 
-    /**
-     * 절대값을 구함
-     */
     private fun Pair<Int, Int>.distance(pair: Pair<Int, Int>): Int {
         return kotlin.math.abs(this.first - pair.first) + kotlin.math.abs(this.second - pair.second)
     }
+
+
+    @Test
+    fun practiceTestSolutionTest() {
+        val answers = intArrayOf(1,3,2,4,2)
+        val firstAnswers = arrayListOf(1, 2, 3, 4, 5)
+        val secondAnswers = arrayListOf(2, 1, 2, 3, 2, 4, 2, 5)
+        val thirdAnswers = arrayListOf(3, 3, 1, 1, 2, 2, 4, 4, 5, 5)
+
+        var firstAnswersCount = 0
+        var secondAnswersCount = 0
+        var thirdAnswersCount = 0
+
+        answers.forEachIndexed { index, answer ->
+            println(firstAnswers[index % firstAnswers.size])
+            println(secondAnswers[index % secondAnswers.size])
+            println(thirdAnswers[index % thirdAnswers.size])
+            println(answers[index])
+            if (firstAnswers[index % firstAnswers.size] == answers[index]) {
+                firstAnswersCount += 1
+            }
+
+            if (secondAnswers[index % secondAnswers.size] == answers[index]) {
+                secondAnswersCount += 1
+            }
+
+            if (thirdAnswers[index % thirdAnswers.size] == answers[index]) {
+                thirdAnswersCount += 1
+            }
+        }
+
+
+        val answerList = intArrayOf(firstAnswersCount, secondAnswersCount, thirdAnswersCount)
+        println("test")
+        val max = answerList.maxOrNull()
+
+        val answer = arrayListOf<Int>()
+        if(max == firstAnswersCount){
+            answer.add(1)
+        }
+
+
+        if(max == secondAnswersCount){
+            answer.add(2)
+        }
+
+        if(max == thirdAnswersCount){
+            answer.add(3)
+        }
+        println(answer)
+    }
 }
+

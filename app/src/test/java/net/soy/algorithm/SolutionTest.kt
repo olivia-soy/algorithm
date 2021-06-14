@@ -143,5 +143,35 @@ class SolutionTest {
         }
         println(answer)
     }
+
+    @Test
+    fun summerwintercodingTest(){
+        val nums = intArrayOf(1, 2, 7, 6, 4)
+        var answer = 0
+
+        // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
+        println("Hello Kotlin")
+
+        for (i in 0 until nums.size - 2) {
+            for (j in i + 1 until nums.size - 1) {
+                for (k in j + 1 until nums.size) {
+                    if(isPrime(nums[i] + nums[j] + nums[k])){
+                        answer += 1
+                    }
+                }
+            }
+        }
+        print(answer)
+    }
+
+
+    fun isPrime(num: Int): Boolean {
+        for (i in 2 until num) {
+            if (num % i == 0) {
+                return false
+            }
+        }
+        return true
+    }
 }
 

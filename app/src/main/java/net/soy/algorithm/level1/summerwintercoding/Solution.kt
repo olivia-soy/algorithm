@@ -9,11 +9,30 @@ package net.soy.algorithm.level1.summerwintercoding
  */
 class Solution {
     fun solution(nums: IntArray): Int {
-        var answer = -1
-
-        // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
-        println("Hello Kotlin")
-
+        var answer = 0
+        //key point 1 : 삼중 for 문으로 세 수의 합 구하기
+        for (i in 0 until nums.size - 2) {
+            for (j in i until nums.size - 1) {
+                for (k in j until nums.size) {
+                    if(isPrime(nums[i] + nums[j] + nums[k])){
+                        answer += 1
+                    }
+                }
+            }
+        }
         return answer
+    }
+
+    /**
+     * 소수인지 판별하는 함수
+     * 자기 자신과 1 이외의 수로 나눠지지 않는 수
+     */
+    private fun isPrime(num: Int): Boolean {
+        for (i in 2 until num) {
+            if (num % i == 0) {
+                return false
+            }
+        }
+        return true
     }
 }

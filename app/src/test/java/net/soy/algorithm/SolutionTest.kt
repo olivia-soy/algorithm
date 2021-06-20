@@ -96,7 +96,7 @@ class SolutionTest {
 
     @Test
     fun practiceTestSolutionTest() {
-        val answers = intArrayOf(1,3,2,4,2)
+        val answers = intArrayOf(1, 3, 2, 4, 2)
         val firstAnswers = arrayListOf(1, 2, 3, 4, 5)
         val secondAnswers = arrayListOf(2, 1, 2, 3, 2, 4, 2, 5)
         val thirdAnswers = arrayListOf(3, 3, 1, 1, 2, 2, 4, 4, 5, 5)
@@ -129,23 +129,23 @@ class SolutionTest {
         val max = answerList.maxOrNull()
 
         val answer = arrayListOf<Int>()
-        if(max == firstAnswersCount){
+        if (max == firstAnswersCount) {
             answer.add(1)
         }
 
 
-        if(max == secondAnswersCount){
+        if (max == secondAnswersCount) {
             answer.add(2)
         }
 
-        if(max == thirdAnswersCount){
+        if (max == thirdAnswersCount) {
             answer.add(3)
         }
         println(answer)
     }
 
     @Test
-    fun summerwintercodingTest(){
+    fun summerwintercodingTest() {
         val nums = intArrayOf(1, 2, 7, 6, 4)
         var answer = 0
 
@@ -155,7 +155,7 @@ class SolutionTest {
         for (i in 0 until nums.size - 2) {
             for (j in i + 1 until nums.size - 1) {
                 for (k in j + 1 until nums.size) {
-                    if(isPrime(nums[i] + nums[j] + nums[k])){
+                    if (isPrime(nums[i] + nums[j] + nums[k])) {
                         answer += 1
                     }
                 }
@@ -172,6 +172,105 @@ class SolutionTest {
             }
         }
         return true
+    }
+
+    @Test
+    fun kakaoblindrecruitmentTest() {
+        val new_id = "...!@BaT#*..y.abcdefghijklm"
+        var answer: String = ""
+        answer = step1(new_id)
+        println(answer)
+        answer = step2(answer)
+        println(answer)
+        answer = step3(answer)
+        println(answer)
+        answer = step4(answer)
+        println(answer)
+        answer = step5(answer)
+        println(answer)
+        answer = step6(answer)
+        println(answer)
+        answer = step7(answer)
+        println(answer)
+    }
+
+    /**
+     * 1단계 new_id의 모든 대문자를 대응되는 소문자로 치환합니다.
+     */
+    private fun step1(new_id: String): String {
+        return new_id.toLowerCase()
+    }
+
+    /**
+     * 2단계 new_id에서 알파벳 소문자, 숫자, 빼기(-), 밑줄(_), 마침표(.)를 제외한 모든 문자를 제거합니다.
+     */
+    private fun step2(new_id: String): String {
+//        val charArray = new_id.toCharArray()
+        val sb = StringBuffer(new_id)
+//        val result = charArray.filter {
+//            it in 'a'..'z' || it in '0'..'9' || it == '-' || it == '_' || it == '.'
+//        }.toCharArray()
+        val result = sb.filter {
+            it in 'a'..'z' || it in '0'..'9' || it == '-' || it == '_' || it == '.'
+        }
+        return result.toString()
+    }
+
+    /**
+     * 3단계 new_id에서 마침표(.)가 2번 이상 연속된 부분을 하나의 마침표(.)로 치환합니다.
+     */
+    private fun step3(new_id: String): String {
+        var result = new_id
+        while (result.contains("..")) {
+            result = result.replace("..", ".")
+        }
+        return result
+    }
+
+    /**
+     * 4단계 new_id에서 마침표(.)가 처음이나 끝에 위치한다면 제거합니다.
+     */
+    private fun step4(new_id: String): String {
+        var result = new_id
+        result = result.removePrefix(".")
+        result = result.removeSuffix(".")
+        return result
+    }
+
+    /**
+     * 5단계 new_id가 빈 문자열이라면, new_id에 "a"를 대입합니다.
+     */
+    private fun step5(new_id: String): String {
+        return if (new_id.isBlank()) {
+            "a"
+        } else {
+            new_id
+        }
+    }
+
+    /**
+     * 6단계 new_id의 길이가 16자 이상이면, new_id의 첫 15개의 문자를 제외한 나머지 문자들을 모두 제거합니다.
+     * 만약 제거 후 마침표(.)가 new_id의 끝에 위치한다면 끝에 위치한 마침표(.) 문자를 제거합니다.
+     */
+    private fun step6(new_id: String): String {
+        var result = new_id
+        if (result.toCharArray().size > 15) {
+            result = result.removeRange(15, result.toCharArray().size)
+        }
+        return step4(result)
+    }
+
+    /**
+     * 7단계 new_id의 길이가 2자 이하라면, new_id의 마지막 문자를 new_id의 길이가 3이 될 때까지 반복해서 끝에 붙입니다.
+     */
+    private fun step7(new_id: String): String {
+        var result = StringBuffer(new_id)
+        if (result.length < 3) {
+            while (result.length < 3) {
+                result.append(result.last())
+            }
+        }
+        return result.toString()
     }
 }
 

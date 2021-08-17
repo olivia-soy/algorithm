@@ -1,5 +1,6 @@
 package net.soy.algorithm
 
+import net.soy.algorithm.level1.exercise.rectangular_star.Solution
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -7,6 +8,7 @@ import kotlin.math.abs
 import kotlin.math.hypot
 import kotlin.math.pow
 import kotlin.math.sqrt
+import kotlin.test.assertEquals
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -271,6 +273,16 @@ class SolutionTest {
             }
         }
         return result.toString()
+    }
+
+    @Test
+    fun rectangleStarTest() {
+        val rectangularStar = Solution()
+
+        assertEquals(
+            expected = rectangularStar.solution(arrayOf(5, 3)),
+            actual = "*****\n*****\n*****\n"
+        )
     }
 }
 

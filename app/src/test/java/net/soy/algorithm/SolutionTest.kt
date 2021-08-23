@@ -284,5 +284,16 @@ class SolutionTest {
             actual = "*****\n*****\n*****\n"
         )
     }
+
+    @Test
+    fun numericstringsandenglishwordsTest(){
+        val numericstringsandenglishwords = net.soy.algorithm.level1.kakaowinterintern.numericstringsandenglishwords.Solution()
+
+        assertEquals(
+            expected = numericstringsandenglishwords.solution("one4seveneightone4seveneightone4seveneight"),
+            actual = 147814781478
+        )
+    }
+
 }
 

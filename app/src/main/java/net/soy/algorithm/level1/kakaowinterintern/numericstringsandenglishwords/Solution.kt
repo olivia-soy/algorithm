@@ -8,30 +8,22 @@ package net.soy.algorithm.level1.kakaowinterintern.numericstringsandenglishwords
  */
 class Solution {
     fun solution(s: String): Int {
-        val sb = StringBuffer(s)
-
-        val result = sb.filter {
-            it in 'a'..'z' || it in '0'..'9' || it == '-' || it == '_' || it == '.'
-        }.map {
-
+        var sReplaced = s
+        while (sReplaced.toIntOrNull() == null) {
+            sReplaced = when {
+                sReplaced.contains("one") -> sReplaced.replace("one", "1")
+                sReplaced.contains("two") -> sReplaced.replace("two", "2")
+                sReplaced.contains("three") -> sReplaced.replace("three", "3")
+                sReplaced.contains("four") -> sReplaced.replace("four", "4")
+                sReplaced.contains("five") -> sReplaced.replace("five", "5")
+                sReplaced.contains("six") -> sReplaced.replace("six", "6")
+                sReplaced.contains("seven") -> sReplaced.replace("seven", "7")
+                sReplaced.contains("eight") -> sReplaced.replace("eight", "8")
+                sReplaced.contains("nine") -> sReplaced.replace("nine", "9")
+                sReplaced.contains("zero") -> sReplaced.replace("zero", "0")
+                else -> sReplaced
+            }
         }
-        var answer: Int = 0
-        return answer
-    }
-
-    fun strToNum(strNum: String): Int{
-        return when(strNum){
-            "zero" -> 0
-            "one" -> 1
-            "two" -> 2
-            "three" -> 3
-            "four" -> 4
-            "five" -> 5
-            "siz" ->  6
-            "seven" -> 7
-            "eight" -> 8
-            "nine" -> 9
-            else -> 0
-        }
+        return sReplaced.toInt()
     }
 }

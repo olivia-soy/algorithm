@@ -290,8 +290,18 @@ class SolutionTest {
         val numericstringsandenglishwords = net.soy.algorithm.level1.kakaowinterintern.numericstringsandenglishwords.Solution()
 
         assertEquals(
-            expected = numericstringsandenglishwords.solution("one4seveneightone4seveneightone4seveneight"),
+            expected = numericstringsandenglishwords.solution("one4seveneight"),
             actual = 147814781478
+        )
+    }
+
+    @Test
+    fun gymsuitTest(){
+        val gymsuit = net.soy.algorithm.level1.greedy.gymsuit.Solution()
+
+        assertEquals(
+            expected = gymsuit.solution(n= 3, lost = intArrayOf(1, 2), reserve = intArrayOf(2, 3)),
+            actual = 2
         )
     }
 

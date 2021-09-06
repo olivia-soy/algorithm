@@ -315,5 +315,15 @@ class SolutionTest {
         )
     }
 
+    @Test
+    fun hIndexTest(){
+        val hIndex = net.soy.algorithm.level2.sort.h_index.Solution()
+
+        assertEquals(
+            expected = hIndex.solution(intArrayOf(3, 0, 6, 1, 5)),
+            actual = 3
+        )
+    }
+
 }
 

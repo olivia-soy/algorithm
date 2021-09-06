@@ -1,7 +1,5 @@
 package net.soy.algorithm.level2.sort.h_index
 
-import java.util.*
-
 /**
  * 코딩테스트 연습 > 정렬 > H-Index
  *
@@ -10,7 +8,14 @@ import java.util.*
  */
 class Solution {
     fun solution(citations: IntArray): Int {
-        var answer = 0
-        return answer
+        val sortedCitations = citations.sortedDescending() // 내림차순으로 정렬
+
+        sortedCitations.forEachIndexed { index, i ->
+            if(index >= i){
+                return index
+            }
+        }
+
+        return sortedCitations.size
     }
 }

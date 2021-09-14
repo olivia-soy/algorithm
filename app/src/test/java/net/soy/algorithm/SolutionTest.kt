@@ -325,5 +325,15 @@ class SolutionTest {
         )
     }
 
+    @Test
+    fun bestAlbumTest(){
+        val bestAlbum = net.soy.algorithm.level3.hash.bestAlbum.Solution()
+
+        assertEquals(
+            expected = bestAlbum.solution(arrayOf("classic", "pop", "classic", "classic", "pop"), intArrayOf(500, 600, 150, 800, 2500)),
+            actual = intArrayOf(4, 1, 3, 0)
+        )
+    }
+
 }
 

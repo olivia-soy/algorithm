@@ -335,5 +335,15 @@ class SolutionTest {
         )
     }
 
+    @Test
+    fun nNumbersSpacedByXTest(){
+        val nNumbersSpacedByX = net.soy.algorithm.level1.exercise.nNumbersSpacedByX.Solution()
+
+        assertEquals(
+            expected = nNumbersSpacedByX.solution(x = -4, n = 2),
+            actual = longArrayOf(-4, -8)
+        )
+    }
+
 }
 

@@ -8,7 +8,10 @@ package net.soy.algorithm.level1.exercise.nNumbersSpacedByX
  */
 class Solution {
     fun solution(x: Int, n: Int): LongArray {
-        var answer = longArrayOf()
+        val answer = LongArray(n)
+        for(i in 0 until n){
+            answer[i] = x.toLong().times(i + 1)
+        }
         return answer
     }
 }

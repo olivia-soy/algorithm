@@ -1,4 +1,4 @@
-package net.soy.algorithm.level2.brute_force_search.find_prime_number
+package net.soy.algorithm.level2.bruteForceSearch.findPrimeNumber
 
 /**
  * Class: Solution

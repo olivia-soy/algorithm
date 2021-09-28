@@ -1,4 +1,4 @@
-package net.soy.algorithm.level2.hash.phone_book;
+package net.soy.algorithm.level2.hash.phoneBook;
 
 import java.util.Arrays;
 

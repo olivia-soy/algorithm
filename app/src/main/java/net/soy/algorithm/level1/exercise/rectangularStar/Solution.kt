@@ -1,4 +1,4 @@
-package net.soy.algorithm.level1.exercise.rectangular_star
+package net.soy.algorithm.level1.exercise.rectangularStar
 
 /**
  * Algorithm

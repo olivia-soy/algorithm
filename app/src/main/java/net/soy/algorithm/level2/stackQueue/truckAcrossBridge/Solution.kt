@@ -1,4 +1,4 @@
-package net.soy.algorithm.level2.stack_queue.truck_across_bridge
+package net.soy.algorithm.level2.stackQueue.truckAcrossBridge
 
 import java.util.*
 

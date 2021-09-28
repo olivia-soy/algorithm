@@ -1,4 +1,4 @@
-package net.soy.algorithm.level2.stack_queue.function_development
+package net.soy.algorithm.level2.stackQueue.functionDevelopment
 
 import java.util.*
 

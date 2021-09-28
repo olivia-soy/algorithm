@@ -1,6 +1,4 @@
-package net.soy.algorithm.level2.summer_winter_coding_2019.a_fine_square
-
-import android.util.Log
+package net.soy.algorithm.level2.summerWinterCoding2019.aFineSquare
 
 /**
  * Class: Solution

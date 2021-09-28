@@ -1,4 +1,4 @@
-package net.soy.algorithm.level1.brute_force_search.practice_test
+package net.soy.algorithm.level1.exercise.bruteForceSearch
 
 /**
  * Class: Solution

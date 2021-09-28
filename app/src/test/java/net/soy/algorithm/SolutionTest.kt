@@ -1,13 +1,8 @@
 package net.soy.algorithm
 
-import net.soy.algorithm.level1.exercise.rectangular_star.Solution
+import net.soy.algorithm.level1.exercise.rectangularStar.Solution
 import org.junit.Test
 
-import org.junit.Assert.*
-import kotlin.math.abs
-import kotlin.math.hypot
-import kotlin.math.pow
-import kotlin.math.sqrt
 import kotlin.test.assertEquals
 
 /**
@@ -307,7 +302,7 @@ class SolutionTest {
 
     @Test
     fun secondWeekTest(){
-        val secondWeek = net.soy.algorithm.level1.weeklycodechallenge.second_week.Solution()
+        val secondWeek = net.soy.algorithm.level1.weeklycodechallenge.secondWeek.Solution()
 
         assertEquals(
             expected = secondWeek.solution(arrayOf(intArrayOf(70,49,90), intArrayOf(68,50,38), intArrayOf(73,31,100))),
@@ -317,7 +312,7 @@ class SolutionTest {
 
     @Test
     fun hIndexTest(){
-        val hIndex = net.soy.algorithm.level2.sort.h_index.Solution()
+        val hIndex = net.soy.algorithm.level2.sort.hIndex.Solution()
 
         assertEquals(
             expected = hIndex.solution(intArrayOf(3, 0, 6, 1, 5)),

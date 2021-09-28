@@ -1,4 +1,4 @@
-package net.soy.algorithm.level1.weeklycodechallenge.second_week
+package net.soy.algorithm.level1.weeklycodechallenge.secondWeek
 
 import java.util.*
 

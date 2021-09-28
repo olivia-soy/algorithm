@@ -1,4 +1,4 @@
-package net.soy.algorithm.level2.stack_queue.top
+package net.soy.algorithm.level2.stackQueue.top
 
 import java.util.*
 

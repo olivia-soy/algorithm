@@ -1,4 +1,4 @@
-package net.soy.algorithm.level2.sort.h_index
+package net.soy.algorithm.level2.sort.hIndex
 
 /**
  * 코딩테스트 연습 > 정렬 > H-Index

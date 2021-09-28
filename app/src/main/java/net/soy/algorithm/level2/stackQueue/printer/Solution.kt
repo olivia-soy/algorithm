@@ -1,4 +1,4 @@
-package net.soy.algorithm.level2.stack_queue.printer
+package net.soy.algorithm.level2.stackQueue.printer
 
 import java.util.*
 

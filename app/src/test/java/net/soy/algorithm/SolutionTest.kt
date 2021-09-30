@@ -281,8 +281,9 @@ class SolutionTest {
     }
 
     @Test
-    fun numericstringsandenglishwordsTest(){
-        val numericstringsandenglishwords = net.soy.algorithm.level1.kakaowinterintern.numericstringsandenglishwords.Solution()
+    fun numericstringsandenglishwordsTest() {
+        val numericstringsandenglishwords =
+            net.soy.algorithm.level1.kakaowinterintern.numericstringsandenglishwords.Solution()
 
         assertEquals(
             expected = numericstringsandenglishwords.solution("one4seveneight"),
@@ -291,27 +292,33 @@ class SolutionTest {
     }
 
     @Test
-    fun gymsuitTest(){
+    fun gymsuitTest() {
         val gymsuit = net.soy.algorithm.level1.greedy.gymsuit.Solution()
 
         assertEquals(
-            expected = gymsuit.solution(n= 3, lost = intArrayOf(1, 2), reserve = intArrayOf(2, 3)),
+            expected = gymsuit.solution(n = 3, lost = intArrayOf(1, 2), reserve = intArrayOf(2, 3)),
             actual = 2
         )
     }
 
     @Test
-    fun secondWeekTest(){
+    fun secondWeekTest() {
         val secondWeek = net.soy.algorithm.level1.weeklycodechallenge.secondWeek.Solution()
 
         assertEquals(
-            expected = secondWeek.solution(arrayOf(intArrayOf(70,49,90), intArrayOf(68,50,38), intArrayOf(73,31,100))),
+            expected = secondWeek.solution(
+                arrayOf(
+                    intArrayOf(70, 49, 90),
+                    intArrayOf(68, 50, 38),
+                    intArrayOf(73, 31, 100)
+                )
+            ),
             actual = "CFD"
         )
     }
 
     @Test
-    fun hIndexTest(){
+    fun hIndexTest() {
         val hIndex = net.soy.algorithm.level2.sort.hIndex.Solution()
 
         assertEquals(
@@ -321,17 +328,20 @@ class SolutionTest {
     }
 
     @Test
-    fun bestAlbumTest(){
+    fun bestAlbumTest() {
         val bestAlbum = net.soy.algorithm.level3.hash.bestAlbum.Solution()
 
         assertEquals(
-            expected = bestAlbum.solution(arrayOf("classic", "pop", "classic", "classic", "pop"), intArrayOf(500, 600, 150, 800, 2500)),
+            expected = bestAlbum.solution(
+                arrayOf("classic", "pop", "classic", "classic", "pop"),
+                intArrayOf(500, 600, 150, 800, 2500)
+            ),
             actual = intArrayOf(4, 1, 3, 0)
         )
     }
 
     @Test
-    fun nNumbersSpacedByXTest(){
+    fun nNumbersSpacedByXTest() {
         val nNumbersSpacedByX = net.soy.algorithm.level1.exercise.nNumbersSpacedByX.Solution()
 
         assertEquals(
@@ -341,12 +351,27 @@ class SolutionTest {
     }
 
     @Test
-    fun theTopAndBottomOfTheLotteryTest(){
-        val theTopAndBottomOfTheLottery = net.soy.algorithm.level1.devMatching2021.theTopAndBottomOfTheLottery.Solution()
+    fun theTopAndBottomOfTheLotteryTest() {
+        val theTopAndBottomOfTheLottery =
+            net.soy.algorithm.level1.devMatching2021.theTopAndBottomOfTheLottery.Solution()
 
         assertEquals(
-            expected = theTopAndBottomOfTheLottery.solution(lottos = intArrayOf(0, 0, 0, 0, 0, 0), win_nums = intArrayOf(38, 19, 20, 40, 15, 25)),
+            expected = theTopAndBottomOfTheLottery.solution(
+                lottos = intArrayOf(0, 0, 0, 0, 0, 0),
+                win_nums = intArrayOf(38, 19, 20, 40, 15, 25)
+            ),
             actual = intArrayOf(1, 6)
+        )
+    }
+
+    @Test
+    fun notIncludedNumTest() {
+        val notIncludedNum =
+            net.soy.algorithm.level1.monthlycodechallenge.season3.notIncludedNum.Solution()
+
+        assertEquals(
+            expected = notIncludedNum.solution(intArrayOf(5,8,4,0,6,7,9)),
+            actual = 6
         )
     }
 

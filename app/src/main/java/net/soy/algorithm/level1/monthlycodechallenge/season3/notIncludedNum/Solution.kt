@@ -8,7 +8,6 @@ package net.soy.algorithm.level1.monthlycodechallenge.season3.notIncludedNum
  */
 class Solution {
     fun solution(numbers: IntArray): Int {
-        var answer: Int = -1
-        return answer
+        return intArrayOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9).filter { it !in numbers }.sum()
     }
 }

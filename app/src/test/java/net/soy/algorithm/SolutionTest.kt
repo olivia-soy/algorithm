@@ -340,5 +340,15 @@ class SolutionTest {
         )
     }
 
+    @Test
+    fun theTopAndBottomOfTheLotteryTest(){
+        val theTopAndBottomOfTheLottery = net.soy.algorithm.level1.devMatching2021.theTopAndBottomOfTheLottery.Solution()
+
+        assertEquals(
+            expected = theTopAndBottomOfTheLottery.solution(lottos = intArrayOf(0, 0, 0, 0, 0, 0), win_nums = intArrayOf(38, 19, 20, 40, 15, 25)),
+            actual = intArrayOf(1, 6)
+        )
+    }
+
 }
 

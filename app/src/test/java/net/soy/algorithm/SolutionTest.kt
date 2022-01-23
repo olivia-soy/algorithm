@@ -396,5 +396,18 @@ class SolutionTest {
 //        )
     }
 
+    @Test
+    fun joystickTest() {
+        val joystick =
+            net.soy.algorithm.level2.greedy.joystick.Solution()
+
+        assertEquals(
+            expected = joystick.solution(
+                "JEROEN"
+            ),
+            actual = 56
+        )
+    }
+
 }
 

@@ -1,4 +1,4 @@
-package net.soy.algorithm.level3.heap.diskControl;
+package net.soy.algorithm.level3.heap.diskControl
 
 /**
  * Algorithm
@@ -8,8 +8,8 @@ package net.soy.algorithm.level3.heap.diskControl;
  * @since 2021-12-02
  */
 class Solution {
-    public int solution(int[][] jobs) {
-        int answer = 0;
-        return answer;
+    fun solution(jobs: Array<IntArray>): Int {
+        var answer = 0
+        return answer
     }
 }

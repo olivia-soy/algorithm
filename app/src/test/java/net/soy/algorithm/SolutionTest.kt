@@ -1,5 +1,8 @@
 package net.soy.algorithm
 
+import net.soy.algorithm.codingTest.Test1
+import net.soy.algorithm.codingTest.test2.Course
+import net.soy.algorithm.codingTest.test2.University
 import net.soy.algorithm.level1.exercise.rectangularStar.Solution
 import org.junit.Test
 
@@ -365,14 +368,32 @@ class SolutionTest {
     }
 
     @Test
-    fun notIncludedNumTest() {
-        val notIncludedNum =
-            net.soy.algorithm.level1.monthlycodechallenge.season3.notIncludedNum.Solution()
+    fun mobility1Test() {
+        val mobility1 =
+            Test1()
 
         assertEquals(
-            expected = notIncludedNum.solution(intArrayOf(5,8,4,0,6,7,9)),
-            actual = 6
+            expected = mobility1.solution(
+//                A = arrayOf("adam","eva", "leo"),
+//                A = arrayOf("pim","pom"),
+                A = arrayOf("sander","amy", "ann", "michael"),
+                B = arrayOf("123456789","234567890", "789123456", "123123123"),
+                P = "1"
+            ),
+            actual = "ann"
         )
+    }
+    @Test
+    fun mobility2Test() {
+//        val mobility1 =
+//            University()
+//
+//        assertEquals(
+//            expected = mobility1.getPaidCoursesWithTheNumbersOfSubscribedStudents(
+//              coursesCount = 3
+//            ),
+//            actual = mapOf(Course(name = "test", isPaid = true, id = 0) to 2)
+//        )
     }
 
 }

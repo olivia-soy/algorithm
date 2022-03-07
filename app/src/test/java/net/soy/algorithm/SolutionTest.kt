@@ -1,5 +1,6 @@
 package net.soy.algorithm
 
+import net.soy.algorithm.codility.BinaryGap
 import net.soy.algorithm.level1.exercise.rectangularStar.Solution
 import org.junit.Test
 
@@ -370,8 +371,19 @@ class SolutionTest {
             net.soy.algorithm.level1.monthlycodechallenge.season3.notIncludedNum.Solution()
 
         assertEquals(
-            expected = notIncludedNum.solution(intArrayOf(5,8,4,0,6,7,9)),
+            expected = notIncludedNum.solution(intArrayOf(5, 8, 4, 0, 6, 7, 9)),
             actual = 6
+        )
+    }
+
+    @Test
+    fun binaryGapTest() {
+        val binaryGap =
+            BinaryGap()
+
+        assertEquals(
+            expected = binaryGap.solution(32),
+            actual = 0
         )
     }
 

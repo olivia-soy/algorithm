@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 /**
  * Algorithm
  * 코팅테스트 연습 > 힙(Heap) > 더 맵게
- * <p>
+ *
  * 우선순위 큐 문제 : Priority Queue
  *
  * @author LEESOYOUNG

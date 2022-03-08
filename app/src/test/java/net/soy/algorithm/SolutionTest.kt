@@ -1,12 +1,9 @@
 package net.soy.algorithm
 
-import net.soy.algorithm.codingTest.Test1
-import net.soy.algorithm.codingTest.test2.Course
-import net.soy.algorithm.codingTest.test2.University
 import net.soy.algorithm.codility.BinaryGap
+import net.soy.algorithm.codility.CyclicRotation
 import net.soy.algorithm.level1.exercise.rectangularStar.Solution
 import org.junit.Test
-
 import kotlin.test.assertEquals
 
 /**
@@ -368,22 +365,7 @@ class SolutionTest {
         )
     }
 
-    @Test
-    fun mobility1Test() {
-        val mobility1 =
-            Test1()
 
-        assertEquals(
-            expected = mobility1.solution(
-//                A = arrayOf("adam","eva", "leo"),
-//                A = arrayOf("pim","pom"),
-                A = arrayOf("sander","amy", "ann", "michael"),
-                B = arrayOf("123456789","234567890", "789123456", "123123123"),
-                P = "1"
-            ),
-            actual = "ann"
-        )
-    }
     @Test
     fun mobility2Test() {
 //        val mobility1 =
@@ -421,5 +403,16 @@ class SolutionTest {
         )
     }
 
+    @Test
+    fun CyclicRotationTest() {
+        val cyclicRotation =
+            CyclicRotation()
+
+        assertEquals(
+            expected = cyclicRotation.solution(A = intArrayOf(1, 2, 3, 4), K = 4),
+            actual = intArrayOf(1, 2, 3, 4)
+        )
+
+    }
 }
 

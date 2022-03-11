@@ -2,6 +2,7 @@ package net.soy.algorithm
 
 import net.soy.algorithm.codility.BinaryGap
 import net.soy.algorithm.codility.CyclicRotation
+import net.soy.algorithm.codility.OddOccurrenceInArray
 import net.soy.algorithm.level1.exercise.rectangularStar.Solution
 import org.junit.Test
 import kotlin.test.assertEquals
@@ -411,6 +412,30 @@ class SolutionTest {
         assertEquals(
             expected = cyclicRotation.solution(A = intArrayOf(1, 2, 3, 4), K = 4),
             actual = intArrayOf(1, 2, 3, 4)
+        )
+
+    }
+
+    @Test
+    fun OddOccurrenceInArrayTest() {
+        val oddOccurrenceInArray =
+            OddOccurrenceInArray()
+/*
+        val oddOccurrenceInArray =
+            OddOccurrenceInArray()
+        new Object [] { new int [] { 9, 3, 9, 3, 9, 7, 9 },  7 },
+        new Object [] { new int [] { 1, 2, 1, 3, 5, 2, 3 },  5 },
+
+        //double pair matching
+        new Object [] { new int [] { 1, 2, 1, 3, 5, 2, 3, 1, 1, 2, 2 },  5 },
+
+        //large numbers
+        new Object [] { new int [] { 1000000, 2000000, 1000000, 30000000, 5000000, 2000000, 30000000 },  5000000 },
+*/
+
+        assertEquals(
+            expected = oddOccurrenceInArray.solution(A = intArrayOf(1, 2, 1, 3, 5, 2, 3, 1, 1, 2, 2)),
+            actual = 5
         )
 
     }

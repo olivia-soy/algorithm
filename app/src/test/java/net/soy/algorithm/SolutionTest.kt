@@ -2,6 +2,7 @@ package net.soy.algorithm
 
 import net.soy.algorithm.codility.BinaryGap
 import net.soy.algorithm.codility.CyclicRotation
+import net.soy.algorithm.codility.FrogJmp
 import net.soy.algorithm.codility.OddOccurrenceInArray
 import net.soy.algorithm.level1.exercise.rectangularStar.Solution
 import org.junit.Test
@@ -436,6 +437,18 @@ class SolutionTest {
         assertEquals(
             expected = oddOccurrenceInArray.solution(A = intArrayOf(1, 2, 1, 3, 5, 2, 3, 1, 1, 2, 2)),
             actual = 5
+        )
+
+    }
+
+    @Test
+    fun FrogJmpTest() {
+        val frogJmp =
+            FrogJmp()
+
+        assertEquals(
+            expected = frogJmp.solution(X = 0, Y = 0, D= 0),
+            actual = 1
         )
 
     }

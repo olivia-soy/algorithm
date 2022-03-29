@@ -1,9 +1,6 @@
 package net.soy.algorithm
 
-import net.soy.algorithm.codility.BinaryGap
-import net.soy.algorithm.codility.CyclicRotation
-import net.soy.algorithm.codility.FrogJmp
-import net.soy.algorithm.codility.OddOccurrenceInArray
+import net.soy.algorithm.codility.*
 import net.soy.algorithm.level1.exercise.rectangularStar.Solution
 import org.junit.Test
 import kotlin.test.assertEquals
@@ -435,7 +432,21 @@ class SolutionTest {
 */
 
         assertEquals(
-            expected = oddOccurrenceInArray.solution(A = intArrayOf(1, 2, 1, 3, 5, 2, 3, 1, 1, 2, 2)),
+            expected = oddOccurrenceInArray.solution(
+                A = intArrayOf(
+                    1,
+                    2,
+                    1,
+                    3,
+                    5,
+                    2,
+                    3,
+                    1,
+                    1,
+                    2,
+                    2
+                )
+            ),
             actual = 5
         )
 
@@ -447,8 +458,26 @@ class SolutionTest {
             FrogJmp()
 
         assertEquals(
-            expected = frogJmp.solution(X = 0, Y = 0, D= 0),
+            expected = frogJmp.solution(X = 0, Y = 0, D = 0),
             actual = 1
+        )
+
+    }
+
+    @Test
+    fun PermMissingElemTest() {
+        val permMissingElem =
+            PermMissingElem()
+
+        /**
+         * intArrayOf(1, 2, 3, 4, 5) actual = 6
+         * intArrayOf(2, 3, 4, 5) actual = 1
+         * intArrayOf(2, 3, 1, 5) actual = 4
+         */
+
+        assertEquals(
+            expected = permMissingElem.solution(intArrayOf(1, 2, 3, 4, 5)),
+            actual = 6
         )
 
     }

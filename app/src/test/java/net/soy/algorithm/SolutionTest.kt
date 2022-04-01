@@ -481,5 +481,23 @@ class SolutionTest {
         )
 
     }
+
+    @Test
+    fun TapeEquilibriumTest() {
+        val tapeEquilibrium =
+            TapeEquilibrium()
+
+        /**
+         * intArrayOf(1, 2, 3, 4, 5) actual = 6
+         * intArrayOf(2, 3, 4, 5) actual = 1
+         * intArrayOf(2, 3, 1, 5) actual = 4
+         */
+
+        assertEquals(
+            expected = tapeEquilibrium.solution(intArrayOf(3, 1, 2, 4, 3)),
+            actual = 6
+        )
+
+    }
 }
 

@@ -7,14 +7,15 @@ import kotlin.math.abs
  * # TapeEquilibrium
  * @author LEESOYOUNG
  * @since 2022-04-01
+ *
+ * 2차 풀이 69%
  */
 class TapeEquilibrium {
 
     fun solution(A: IntArray): Int {
-        // write your code in Kotlin 1.3.11 (Linux)
 
-        val answer = arrayListOf<Int>()
-        for (p in A.indices) {
+        var answer = Int.MAX_VALUE
+        for (p in 1 until A.size) {
             var a = 0
             var b = 0
             for (i in 0 until p) {
@@ -23,15 +24,11 @@ class TapeEquilibrium {
             for (i in p until A.size) {
                 b += A[i]
             }
-            answer.add(abs(a - b))
+            val test = abs(a - b)
+            if (answer > test)
+                answer = test
         }
 
-        var min = Int.MAX_VALUE
-        for (i in 0 until answer.size) {
-            if (min > answer[i]) {
-                min = answer[i]
-            }
-        }
-        return min
+        return answer
     }
 }

@@ -493,5 +493,14 @@ class SolutionTest {
         )
 
     }
+
+    @Test
+    fun FrogRiverOneTest(){
+        val frogRiverOne = FrogRiverOne()
+        assertEquals(
+            expected = frogRiverOne.solution(X = 5, A = intArrayOf(1, 3, 1, 4, 2, 3, 1, 4)),
+            actual = -1
+        )
+    }
 }
 

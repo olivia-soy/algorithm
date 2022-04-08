@@ -502,5 +502,19 @@ class SolutionTest {
             actual = -1
         )
     }
+
+    @Test
+    fun PermCheckTest(){
+        val permCheck = PermCheck()
+        assertEquals(
+            expected = permCheck.solution(intArrayOf(1, 2, 3, 4, 6, 6)),
+            actual = 0
+        )
+
+      /*  assertEquals(
+            expected = permCheck.solution(intArrayOf(4, 1, 3)),
+            actual = 0
+        )*/
+    }
 }
 

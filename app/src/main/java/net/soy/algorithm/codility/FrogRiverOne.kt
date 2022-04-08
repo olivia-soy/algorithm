@@ -2,7 +2,7 @@ package net.soy.algorithm.codility
 
 /**
  * # Algorithm
- * # FrogRiverOne
+ * # [81%] 개구리가 강 반대편으로 점프할 수 있는 가장 이른 시간을 찾아보세요.
  * @author LEESOYOUNG
  * @since 2022-04-04
  */

@@ -1,9 +1,14 @@
 package net.soy.algorithm
 
 import net.soy.algorithm.codility.*
+import net.soy.algorithm.hackerrank.CompareTriplets
+import net.soy.algorithm.hackerrank.DiagonalDifference
+import net.soy.algorithm.hackerrank.ExtraLongFactorials
+import net.soy.algorithm.hackerrank.SimpleArraySum
 import net.soy.algorithm.level1.exercise.rectangularStar.Solution
 import org.junit.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertSame
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -515,6 +520,42 @@ class SolutionTest {
             expected = permCheck.solution(intArrayOf(4, 1, 3)),
             actual = 0
         )*/
+    }
+
+    @Test
+    fun SimpleArraySumTest(){
+        val simpleArraySum = SimpleArraySum()
+        assertEquals(
+            expected = simpleArraySum.solution(ar = arrayOf(1, 2, 3)),
+            actual = 6
+        )
+    }
+
+    @Test
+    fun CompareTripletsTest(){
+        val compareTriplets = CompareTriplets()
+        assertSame(
+            expected = compareTriplets.solution(a = arrayOf(5, 6, 7), b = arrayOf(3, 6, 10)),
+            actual = arrayOf(1, 1)
+        )
+    }
+
+    @Test
+    fun DiagonalDifferenceTest(){
+        val diagonalDifference = DiagonalDifference()
+        assertSame(
+            expected = diagonalDifference.solution(arr = arrayOf(arrayOf(11, 2, 4), arrayOf(4, 5, 6), arrayOf(10, 8, -12))),
+            actual = 15
+        )
+    }
+
+    @Test
+    fun ExtraLongFactorialsTest(){
+        val extraLongFactorials = ExtraLongFactorials()
+        assertSame(
+            expected = extraLongFactorials.solution(25),
+            actual = "15511210043330985984000000"
+        )
     }
 }
 

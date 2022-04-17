@@ -1,9 +1,11 @@
 package net.soy.algorithm
 
 import net.soy.algorithm.codility.*
+import net.soy.algorithm.hackerrank.*
 import net.soy.algorithm.level1.exercise.rectangularStar.Solution
 import org.junit.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertSame
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -495,7 +497,7 @@ class SolutionTest {
     }
 
     @Test
-    fun FrogRiverOneTest(){
+    fun FrogRiverOneTest() {
         val frogRiverOne = FrogRiverOne()
         assertEquals(
             expected = frogRiverOne.solution(X = 5, A = intArrayOf(1, 3, 1, 4, 2, 3, 1, 4)),
@@ -504,17 +506,71 @@ class SolutionTest {
     }
 
     @Test
-    fun PermCheckTest(){
+    fun PermCheckTest() {
         val permCheck = PermCheck()
         assertEquals(
             expected = permCheck.solution(intArrayOf(1, 2, 3, 4, 6, 6)),
             actual = 0
         )
 
-      /*  assertEquals(
-            expected = permCheck.solution(intArrayOf(4, 1, 3)),
-            actual = 0
-        )*/
+        /*  assertEquals(
+              expected = permCheck.solution(intArrayOf(4, 1, 3)),
+              actual = 0
+          )*/
+    }
+
+    @Test
+    fun SimpleArraySumTest() {
+        val simpleArraySum = SimpleArraySum()
+        assertEquals(
+            expected = simpleArraySum.solution(ar = arrayOf(1, 2, 3)),
+            actual = 6
+        )
+    }
+
+    @Test
+    fun CompareTripletsTest() {
+        val compareTriplets = CompareTriplets()
+        assertSame(
+            expected = compareTriplets.solution(a = arrayOf(5, 6, 7), b = arrayOf(3, 6, 10)),
+            actual = arrayOf(1, 1)
+        )
+    }
+
+    @Test
+    fun DiagonalDifferenceTest() {
+        val diagonalDifference = DiagonalDifference()
+        assertSame(
+            expected = diagonalDifference.solution(
+                arr = arrayOf(
+                    arrayOf(11, 2, 4),
+                    arrayOf(4, 5, 6),
+                    arrayOf(10, 8, -12)
+                )
+            ),
+            actual = 15
+        )
+    }
+
+    @Test
+    fun ExtraLongFactorialsTest() {
+        val extraLongFactorials = ExtraLongFactorials()
+        assertSame(
+            expected = extraLongFactorials.solution(25),
+            actual = "15511210043330985984000000"
+        )
+    }
+
+    @Test
+    fun ClimbingLeaderboardTest() {
+        val climbingLeaderboard = ClimbingLeaderboard()
+        assertSame(
+            expected = climbingLeaderboard.solution(
+                ranked = arrayOf(100, 90, 90, 80),
+                player = arrayOf(70, 80, 105)
+            ),
+            actual = arrayOf(4, 3, 1)
+        )
     }
 
     @Test

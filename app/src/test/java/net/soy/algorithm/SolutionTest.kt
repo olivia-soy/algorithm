@@ -516,5 +516,19 @@ class SolutionTest {
             actual = 0
         )*/
     }
+
+    @Test
+    fun MaxCountersTest(){
+        val maxCounters = MaxCounters()
+        assertEquals(
+            expected = maxCounters.solution(5, intArrayOf(3, 4, 4, 6, 1, 4, 4)),
+            actual = intArrayOf(3, 2, 2, 4, 2)
+        )
+
+      /*  assertEquals(
+            expected = permCheck.solution(intArrayOf(4, 1, 3)),
+            actual = 0
+        )*/
+    }
 }
 

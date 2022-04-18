@@ -586,5 +586,19 @@ class SolutionTest {
             actual = 0
         )*/
     }
+
+    @Test
+    fun LonelyIntegerTest(){
+        val lonelyInteger = LonelyInteger()
+        assertEquals(
+            expected = lonelyInteger.solution(arrayOf(1, 2, 3, 4, 3, 2, 1)),
+            actual = 4
+        )
+
+      /*  assertEquals(
+            expected = permCheck.solution(intArrayOf(4, 1, 3)),
+            actual = 0
+        )*/
+    }
 }
 

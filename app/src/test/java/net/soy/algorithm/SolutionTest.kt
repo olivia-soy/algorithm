@@ -3,6 +3,7 @@ package net.soy.algorithm
 import net.soy.algorithm.codility.*
 import net.soy.algorithm.hackerrank.*
 import net.soy.algorithm.level1.exercise.rectangularStar.Solution
+import org.junit.Assert.assertArrayEquals
 import org.junit.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertSame
@@ -574,31 +575,29 @@ class SolutionTest {
     }
 
     @Test
-    fun MaxCountersTest(){
+    fun MaxCountersTest() {
         val maxCounters = MaxCounters()
         assertEquals(
             expected = maxCounters.solution(5, intArrayOf(3, 4, 4, 6, 1, 4, 4)),
             actual = intArrayOf(3, 2, 2, 4, 2)
         )
-
-      /*  assertEquals(
-            expected = permCheck.solution(intArrayOf(4, 1, 3)),
-            actual = 0
-        )*/
     }
 
     @Test
-    fun LonelyIntegerTest(){
+    fun LonelyIntegerTest() {
         val lonelyInteger = LonelyInteger()
         assertEquals(
             expected = lonelyInteger.solution(arrayOf(1, 2, 3, 4, 3, 2, 1)),
             actual = 4
         )
+    }
 
-      /*  assertEquals(
-            expected = permCheck.solution(intArrayOf(4, 1, 3)),
-            actual = 0
-        )*/
+    @Test
+    fun NonDivisibleSubsetTest() {
+        val nonDivisibleSubset = GradingStudents()
+        assertArrayEquals(
+            nonDivisibleSubset.solution(arrayOf(73, 67, 38, 33)), arrayOf(75, 67, 40, 33)
+        )
     }
 }
 

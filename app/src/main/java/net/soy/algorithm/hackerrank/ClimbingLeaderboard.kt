@@ -16,27 +16,24 @@ class ClimbingLeaderboard {
      *
      *
      * Terminated due to timeout :(
+     * -> 역순으로 진행하면서 체크가 완료된 경우 startIndex 를 하나씩 늘어나게 진행
      */
-    private var startIndex = 0
     fun solution(ranked: Array<Int>, player: Array<Int>): Array<Int> {
         val distinctRanked = ranked.distinct()
-
-        return player.reversed().map {
-            println(it)
-            checkRank(distinctRanked.toTypedArray(), it)
-        }.reversed().toTypedArray()
-    }
-
-    private fun checkRank(ranked: Array<Int>, score: Int): Int {
-        var rank = ranked.size + 1
-        for (i in startIndex until ranked.size) {
-            if (ranked[i] <= score) {
-                rank = i + 1
-                break
-            } else {
-                startIndex++
+        var startIndex = 0
+        val answerList = arrayListOf<Int>()
+        for (i in player.size - 1 downTo 0) {
+            var rank = distinctRanked.size + 1
+            for (j in startIndex until distinctRanked.size) {
+                if (distinctRanked[j] <= player[i]) {
+                    rank = j + 1
+                    break
+                } else {
+                    startIndex++
+                }
             }
+            answerList.add(rank)
         }
-        return rank
+        return answerList.reversed().toTypedArray()
     }
 }

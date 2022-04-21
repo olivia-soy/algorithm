@@ -668,5 +668,14 @@ class SolutionTest {
             actual = 1
         )
     }
+
+    @Test
+    fun PassingCarsTest() {
+        val passingCars = PassingCars()
+        assertEquals(
+            expected = passingCars.solution(intArrayOf(0, 1, 0, 1, 1)),
+            actual = 5
+        )
+    }
 }
 

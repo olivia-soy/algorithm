@@ -3,9 +3,6 @@ package net.soy.algorithm
 import net.soy.algorithm.codility.*
 import net.soy.algorithm.hackerrank.*
 import net.soy.algorithm.level1.exercise.rectangularStar.Solution
-import net.soy.algorithm.test.kakao.Test1
-import net.soy.algorithm.test.kakao.Test2
-import net.soy.algorithm.test.kakao.Test3
 import org.junit.Assert.assertArrayEquals
 import org.junit.Test
 import kotlin.test.assertEquals
@@ -604,77 +601,20 @@ class SolutionTest {
     }
 
     @Test
-    fun StaircaseTest() {
-        val staircase = Staircase()
-        assertEquals(
-            expected = staircase.solution(7),
-            actual = 0
-        )
-    }
-
-    @Test
-    fun Test1Test() {
-        val test1 = Test1()
-        /**
-         *      * arr [1, 2, 20, 8, 8,1, 2, 5, 8, 0]
-         * indexes [100, 2]
-         * X 8
-         */
-        assertArrayEquals(
-            test1.solution(
-                X = 8,
-                arr = arrayOf(1, 2, 20, 8, 8, 1, 2, 5, 8, 0),
-                indexes = arrayOf(100, 2)
-            ),
-            arrayOf(-1, 5)
-        )
-    }
-
-    @Test
-    fun Test2Test() {
-        val test2 = Test2()
-        assertArrayEquals(
-            test2.solution(
-                teamB = arrayOf(
-                    13,
-                    22,
-                    29,
-                    1
-                ), teamK = arrayOf(
-                    23,
-                    4,
-                    2,
-                    12,
-                    18,
-                    20,
-                    16
-                )
-            ),
-            arrayOf(
-                3,
-                6,
-                7,
-                0
-            )
-        )
-
-    }
-
-    @Test
-    fun Test3Test() {
-        val test3 = Test3()
-        assertEquals(
-            expected = test3.solution(n = 4, infectedHouses = arrayOf(1)),
-            actual = 1
-        )
-    }
-
-    @Test
     fun PassingCarsTest() {
         val passingCars = PassingCars()
         assertEquals(
             expected = passingCars.solution(intArrayOf(0, 1, 0, 1, 1)),
             actual = 5
+        )
+    }
+
+    @Test
+    fun CountDivTest() {
+        val countDiv = CountDiv()
+        assertEquals(
+            expected = countDiv.solution(A=6, B=11, K=2),
+            actual = 3
         )
     }
 }

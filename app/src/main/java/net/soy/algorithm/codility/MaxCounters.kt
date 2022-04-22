@@ -3,6 +3,7 @@ package net.soy.algorithm.codility
 /**
  * # Algorithm
  * # Calculate the values of counters after applying all alternating operations: increase counter by 1; set value of all counters to current maximum.
+ * [55%]
  * @author LEESOYOUNG
  * @since 2022-04-12
  */
@@ -59,14 +60,18 @@ class MaxCounters {
      */
     fun solution(N: Int, A: IntArray): IntArray {
         var answerList = IntArray(N)
+        var max = Int.MIN_VALUE //최대값 저장
         A.forEach {
-            if (it <= N) {
-                answerList[it - 1] = answerList[it - 1].inc()
-            } else {
-                val max = answerList.maxOrNull()!!
+            if (it == N + 1) {
                 answerList = IntArray(N) {
                     max
                 }
+            } else {
+                val value = answerList[it - 1].inc()
+                if (max < value) {
+                    max = value
+                }
+                answerList[it - 1] = value
             }
         }
         return answerList

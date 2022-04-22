@@ -576,7 +576,7 @@ class SolutionTest {
     @Test
     fun MaxCountersTest(){
         val maxCounters = MaxCounters()
-        assertEquals(
+        assertSame(
             expected = maxCounters.solution(5, intArrayOf(3, 4, 4, 6, 1, 4, 4)),
             actual = intArrayOf(3, 2, 2, 4, 2)
         )

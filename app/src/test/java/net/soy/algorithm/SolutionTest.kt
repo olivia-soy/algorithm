@@ -3,6 +3,10 @@ package net.soy.algorithm
 import net.soy.algorithm.codility.*
 import net.soy.algorithm.hackerrank.*
 import net.soy.algorithm.level1.exercise.rectangularStar.Solution
+import net.soy.algorithm.test.kakao.Test1
+import net.soy.algorithm.test.kakao.Test2
+import net.soy.algorithm.test.kakao.Test3
+import org.junit.Assert.assertArrayEquals
 import org.junit.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertSame
@@ -574,31 +578,104 @@ class SolutionTest {
     }
 
     @Test
-    fun MaxCountersTest(){
+    fun MaxCountersTest() {
         val maxCounters = MaxCounters()
         assertSame(
             expected = maxCounters.solution(5, intArrayOf(3, 4, 4, 6, 1, 4, 4)),
             actual = intArrayOf(3, 2, 2, 4, 2)
         )
-
-      /*  assertEquals(
-            expected = permCheck.solution(intArrayOf(4, 1, 3)),
-            actual = 0
-        )*/
     }
 
     @Test
-    fun LonelyIntegerTest(){
+    fun LonelyIntegerTest() {
         val lonelyInteger = LonelyInteger()
         assertEquals(
             expected = lonelyInteger.solution(arrayOf(1, 2, 3, 4, 3, 2, 1)),
             actual = 4
         )
+    }
 
-      /*  assertEquals(
-            expected = permCheck.solution(intArrayOf(4, 1, 3)),
+    @Test
+    fun NonDivisibleSubsetTest() {
+        val nonDivisibleSubset = GradingStudents()
+        assertArrayEquals(
+            nonDivisibleSubset.solution(arrayOf(73, 67, 38, 33)), arrayOf(75, 67, 40, 33)
+        )
+    }
+
+    @Test
+    fun StaircaseTest() {
+        val staircase = Staircase()
+        assertEquals(
+            expected = staircase.solution(7),
             actual = 0
-        )*/
+        )
+    }
+
+    @Test
+    fun Test1Test() {
+        val test1 = Test1()
+        /**
+         *      * arr [1, 2, 20, 8, 8,1, 2, 5, 8, 0]
+         * indexes [100, 2]
+         * X 8
+         */
+        assertArrayEquals(
+            test1.solution(
+                X = 8,
+                arr = arrayOf(1, 2, 20, 8, 8, 1, 2, 5, 8, 0),
+                indexes = arrayOf(100, 2)
+            ),
+            arrayOf(-1, 5)
+        )
+    }
+
+    @Test
+    fun Test2Test() {
+        val test2 = Test2()
+        assertArrayEquals(
+            test2.solution(
+                teamB = arrayOf(
+                    13,
+                    22,
+                    29,
+                    1
+                ), teamK = arrayOf(
+                    23,
+                    4,
+                    2,
+                    12,
+                    18,
+                    20,
+                    16
+                )
+            ),
+            arrayOf(
+                3,
+                6,
+                7,
+                0
+            )
+        )
+
+    }
+
+    @Test
+    fun Test3Test() {
+        val test3 = Test3()
+        assertEquals(
+            expected = test3.solution(n = 4, infectedHouses = arrayOf(1)),
+            actual = 1
+        )
+    }
+
+    @Test
+    fun PassingCarsTest() {
+        val passingCars = PassingCars()
+        assertEquals(
+            expected = passingCars.solution(intArrayOf(0, 1, 0, 1, 1)),
+            actual = 5
+        )
     }
 }
 

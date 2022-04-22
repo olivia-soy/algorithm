@@ -12,6 +12,12 @@ import java.util.*
  * 순열에서 첫 원소가 1이 아니면 조건에 해당되지 않는다
  */
 class PermCheck {
+    /**
+     * N개의 정수로 이루어진 비어 있지 않은 배열 A가 주어진다.
+     * 순열은 1에서 N까지의 각 원소를한 번만 포함하는 시퀀스입니다.
+     *
+     * 배열 A가 주어지면 배열 A가 순열이면 1을 반환하고 그렇지 않으면 0을 반환합니다.
+     */
     fun solution(A: IntArray): Int {
         val treeSet = TreeSet<Int>()
         treeSet.addAll(A.toList())

@@ -613,7 +613,16 @@ class SolutionTest {
     fun CountDivTest() {
         val countDiv = CountDiv()
         assertEquals(
-            expected = countDiv.solution(A=6, B=11, K=2),
+            expected = countDiv.solution(A = 6, B = 11, K = 2),
+            actual = 3
+        )
+    }
+
+    @Test
+    fun DistinctTest() {
+        val distinct = Distinct()
+        assertEquals(
+            expected = distinct.solution(intArrayOf(2, 1, 1, 2, 3, 1)),
             actual = 3
         )
     }

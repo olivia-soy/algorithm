@@ -626,5 +626,22 @@ class SolutionTest {
             actual = 3
         )
     }
+
+    @Test
+    fun PlusMinusTest() {
+        /**
+         *   A[0] = 1
+         *   A[1] = 5
+         *   A[2] = 2
+         *   A[3] = 1
+         *   A[4] = 4
+         *   A[5] = 0
+         */
+        val plusMinus = PlusMinus()
+        assertEquals(
+            expected = plusMinus.solution(arrayOf(-4, 3, -9, 0, 4, 1)),
+            actual = 1
+        )
+    }
 }
 

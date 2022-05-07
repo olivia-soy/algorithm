@@ -631,7 +631,11 @@ class SolutionTest {
 	fun GenomicRangeQueryTest() {
 		val genomicRangeQuery = GenomicRangeQuery()
 		assertEquals(
-			expected = genomicRangeQuery.solution(S = "TC", P = intArrayOf(0, 0, 1), Q = intArrayOf(0, 1, 1)),
+			expected = genomicRangeQuery.solution(
+				S = "TC",
+				P = intArrayOf(0, 0, 1),
+				Q = intArrayOf(0, 1, 1)
+			),
 			actual = intArrayOf(4, 2, 2)
 		)
 	}
@@ -641,6 +645,47 @@ class SolutionTest {
 		val minAvgTwoSlice = MinAvgTwoSlice()
 		assertEquals(
 			expected = minAvgTwoSlice.solution(intArrayOf(-3, -5, -8, -4, -10)),
+			actual = 2
+		)
+	}
+
+	@Test
+	fun MaxProductOfThreeTest() {
+		val maxProductOfThree = MaxProductOfThree()
+		assertEquals(
+			expected = maxProductOfThree.solution(intArrayOf(-3, 1, 2, -2, 5, 6)),
+			actual = 60
+		)
+
+		assertEquals(
+			expected = maxProductOfThree.solution(intArrayOf(-5, -6, -4, -7, -10)),
+			actual = -120
+		)
+	}
+
+	@Test
+	fun TriangleTest() {
+		val triangle = Triangle()
+		assertEquals(
+			expected = triangle.solution(intArrayOf(10, 2, 5, 1, 8, 20)),
+			actual = 1
+		)
+		assertEquals(
+			expected = triangle.solution(intArrayOf(10, 50, 5, 1)),
+			actual = 0
+		)
+
+		assertEquals(
+			expected = triangle.solution(intArrayOf(Int.MAX_VALUE,Int.MAX_VALUE, Int.MAX_VALUE)),
+			actual = 1
+		)
+	}
+
+	@Test
+	fun NumberOfDiscIntersectionsTest() {
+		val numberOfDiscIntersections = NumberOfDiscIntersections()
+		assertEquals(
+			expected = numberOfDiscIntersections.solution(intArrayOf(1, 2147483647, 0)),
 			actual = 2
 		)
 	}

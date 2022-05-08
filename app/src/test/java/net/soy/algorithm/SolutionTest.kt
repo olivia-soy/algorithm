@@ -1,6 +1,9 @@
 package net.soy.algorithm
 
 import net.soy.algorithm.codility.*
+import net.soy.algorithm.codility.stacksandqueues.Brackets
+import net.soy.algorithm.codility.stacksandqueues.Nesting
+import net.soy.algorithm.codility.stacksandqueues.StoneWall
 import net.soy.algorithm.hackerrank.*
 import net.soy.algorithm.level1.exercise.rectangularStar.Solution
 import org.junit.Assert.assertArrayEquals
@@ -618,31 +621,31 @@ class SolutionTest {
 		)
 	}
 
-    @Test
-    fun DistinctTest() {
-        val distinct = Distinct()
-        assertEquals(
-            expected = distinct.solution(intArrayOf(2, 1, 1, 2, 3, 1)),
-            actual = 3
-        )
-    }
+	@Test
+	fun DistinctTest() {
+		val distinct = Distinct()
+		assertEquals(
+			expected = distinct.solution(intArrayOf(2, 1, 1, 2, 3, 1)),
+			actual = 3
+		)
+	}
 
-    @Test
-    fun PlusMinusTest() {
-        /**
-         *   A[0] = 1
-         *   A[1] = 5
-         *   A[2] = 2
-         *   A[3] = 1
-         *   A[4] = 4
-         *   A[5] = 0
-         */
-        val plusMinus = PlusMinus()
-        assertEquals(
-            expected = plusMinus.solution(arrayOf(-4, 3, -9, 0, 4, 1)),
-            actual = 1
-        )
-    }
+	@Test
+	fun PlusMinusTest() {
+		/**
+		 *   A[0] = 1
+		 *   A[1] = 5
+		 *   A[2] = 2
+		 *   A[3] = 1
+		 *   A[4] = 4
+		 *   A[5] = 0
+		 */
+		val plusMinus = PlusMinus()
+		assertEquals(
+			expected = plusMinus.solution(arrayOf(-4, 3, -9, 0, 4, 1)),
+			actual = 1
+		)
+	}
 
 	@Test
 	fun GenomicRangeQueryTest() {
@@ -693,7 +696,7 @@ class SolutionTest {
 		)
 
 		assertEquals(
-			expected = triangle.solution(intArrayOf(Int.MAX_VALUE,Int.MAX_VALUE, Int.MAX_VALUE)),
+			expected = triangle.solution(intArrayOf(Int.MAX_VALUE, Int.MAX_VALUE, Int.MAX_VALUE)),
 			actual = 1
 		)
 	}
@@ -703,6 +706,83 @@ class SolutionTest {
 		val numberOfDiscIntersections = NumberOfDiscIntersections()
 		assertEquals(
 			expected = numberOfDiscIntersections.solution(intArrayOf(1, 2147483647, 0)),
+			actual = 2
+		)
+	}
+
+	@Test
+	fun BracketsTest() {
+		val brackets = Brackets()
+		assertEquals(
+			expected = brackets.solution("{[()()]}"),
+			actual = 1
+		)
+
+		assertEquals(
+			expected = brackets.solution("([)()]"),
+			actual = 0
+		)
+
+		assertEquals(
+			expected = brackets.solution(")("),
+			actual = 0
+		)
+
+		assertEquals(
+			expected = brackets.solution("{{{{"),
+			actual = 0
+		)
+	}
+
+	@Test
+	fun NestingTest() {
+		val nesting = Nesting()
+		assertEquals(
+			expected = nesting.solution("(()(())())"),
+			actual = 1
+		)
+		assertEquals(
+			expected = nesting.solution("())"),
+			actual = 0
+		)
+		assertEquals(
+			expected = nesting.solution("((("),
+			actual = 0
+		)
+	}
+
+	@Test
+	fun StoneWallTest() {
+		val stoneWall = StoneWall()
+		//  H[0] = 8    H[1] = 8    H[2] = 5
+		//  H[3] = 7    H[4] = 9    H[5] = 8
+		//  H[6] = 7    H[7] = 4    H[8] = 8
+		assertEquals(
+			expected = stoneWall.solution(intArrayOf(8, 8, 5, 7, 9, 8, 7, 4, 8)),
+			actual = 7
+		)
+	}
+
+	@Test
+	fun DominatorTest() {
+		val dominator = Dominator()
+		/*A[0] = 3    A[1] = 4    A[2] =  3
+		A[3] = 2    A[4] = 3    A[5] = -1
+		A[6] = 3    A[7] = 3*/
+		assertEquals(
+			expected = dominator.solution(intArrayOf(3, 4, 3, 2, 3, -1, 3, 3)),
+			actual = 3
+		)
+	}
+
+	@Test
+	fun EquiLeaderTest() {
+		val equiLeader = EquiLeader()
+		/*A[0] = 3    A[1] = 4    A[2] =  3
+		A[3] = 2    A[4] = 3    A[5] = -1
+		A[6] = 3    A[7] = 3*/
+		assertEquals(
+			expected = equiLeader.solution(intArrayOf(4, 3, 4, 4, 4, 2)),
 			actual = 2
 		)
 	}

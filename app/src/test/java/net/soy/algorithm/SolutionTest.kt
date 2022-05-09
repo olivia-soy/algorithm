@@ -853,5 +853,19 @@ class SolutionTest {
 				actual = 10
 		)
 	}
+
+	@Test
+	fun CountFactorsTest() {
+		val countFactors = CountFactors()
+		assertEquals(
+				expected = countFactors.solution(1),
+				actual = 1
+		)
+
+		assertEquals(
+				expected = countFactors.solution(24),
+				actual = 8
+		)
+	}
 }
 

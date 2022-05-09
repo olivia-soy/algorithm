@@ -281,19 +281,19 @@ class SolutionTest {
 		val rectangularStar = Solution()
 
 		assertEquals(
-			expected = rectangularStar.solution(arrayOf(5, 3)),
-			actual = "*****\n*****\n*****\n"
+				expected = rectangularStar.solution(arrayOf(5, 3)),
+				actual = "*****\n*****\n*****\n"
 		)
 	}
 
 	@Test
 	fun numericstringsandenglishwordsTest() {
 		val numericstringsandenglishwords =
-			net.soy.algorithm.level1.kakaowinterintern.numericstringsandenglishwords.Solution()
+				net.soy.algorithm.level1.kakaowinterintern.numericstringsandenglishwords.Solution()
 
 		assertEquals(
-			expected = numericstringsandenglishwords.solution("one4seveneight"),
-			actual = 147814781478
+				expected = numericstringsandenglishwords.solution("one4seveneight"),
+				actual = 147814781478
 		)
 	}
 
@@ -302,8 +302,8 @@ class SolutionTest {
 		val gymsuit = net.soy.algorithm.level1.greedy.gymsuit.Solution()
 
 		assertEquals(
-			expected = gymsuit.solution(n = 3, lost = intArrayOf(1, 2), reserve = intArrayOf(2, 3)),
-			actual = 2
+				expected = gymsuit.solution(n = 3, lost = intArrayOf(1, 2), reserve = intArrayOf(2, 3)),
+				actual = 2
 		)
 	}
 
@@ -312,14 +312,14 @@ class SolutionTest {
 		val secondWeek = net.soy.algorithm.level1.weeklycodechallenge.secondWeek.Solution()
 
 		assertEquals(
-			expected = secondWeek.solution(
-				arrayOf(
-					intArrayOf(70, 49, 90),
-					intArrayOf(68, 50, 38),
-					intArrayOf(73, 31, 100)
-				)
-			),
-			actual = "CFD"
+				expected = secondWeek.solution(
+						arrayOf(
+								intArrayOf(70, 49, 90),
+								intArrayOf(68, 50, 38),
+								intArrayOf(73, 31, 100)
+						)
+				),
+				actual = "CFD"
 		)
 	}
 
@@ -328,8 +328,8 @@ class SolutionTest {
 		val hIndex = net.soy.algorithm.level2.sort.hIndex.Solution()
 
 		assertEquals(
-			expected = hIndex.solution(intArrayOf(3, 0, 6, 1, 5)),
-			actual = 3
+				expected = hIndex.solution(intArrayOf(3, 0, 6, 1, 5)),
+				actual = 3
 		)
 	}
 
@@ -338,11 +338,11 @@ class SolutionTest {
 		val bestAlbum = net.soy.algorithm.level3.hash.bestAlbum.Solution()
 
 		assertEquals(
-			expected = bestAlbum.solution(
-				arrayOf("classic", "pop", "classic", "classic", "pop"),
-				intArrayOf(500, 600, 150, 800, 2500)
-			),
-			actual = intArrayOf(4, 1, 3, 0)
+				expected = bestAlbum.solution(
+						arrayOf("classic", "pop", "classic", "classic", "pop"),
+						intArrayOf(500, 600, 150, 800, 2500)
+				),
+				actual = intArrayOf(4, 1, 3, 0)
 		)
 	}
 
@@ -351,22 +351,22 @@ class SolutionTest {
 		val nNumbersSpacedByX = net.soy.algorithm.level1.exercise.nNumbersSpacedByX.Solution()
 
 		assertEquals(
-			expected = nNumbersSpacedByX.solution(x = -4, n = 2),
-			actual = longArrayOf(-4, -8)
+				expected = nNumbersSpacedByX.solution(x = -4, n = 2),
+				actual = longArrayOf(-4, -8)
 		)
 	}
 
 	@Test
 	fun theTopAndBottomOfTheLotteryTest() {
 		val theTopAndBottomOfTheLottery =
-			net.soy.algorithm.level1.devMatching2021.theTopAndBottomOfTheLottery.Solution()
+				net.soy.algorithm.level1.devMatching2021.theTopAndBottomOfTheLottery.Solution()
 
 		assertEquals(
-			expected = theTopAndBottomOfTheLottery.solution(
-				lottos = intArrayOf(0, 0, 0, 0, 0, 0),
-				win_nums = intArrayOf(38, 19, 20, 40, 15, 25)
-			),
-			actual = intArrayOf(1, 6)
+				expected = theTopAndBottomOfTheLottery.solution(
+						lottos = intArrayOf(0, 0, 0, 0, 0, 0),
+						win_nums = intArrayOf(38, 19, 20, 40, 15, 25)
+				),
+				actual = intArrayOf(1, 6)
 		)
 	}
 
@@ -387,35 +387,35 @@ class SolutionTest {
 	@Test
 	fun joystickTest() {
 		val joystick =
-			net.soy.algorithm.level2.greedy.joystick.Solution()
+				net.soy.algorithm.level2.greedy.joystick.Solution()
 
 		assertEquals(
-			expected = joystick.solution(
-				"JEROEN"
-			),
-			actual = 56
+				expected = joystick.solution(
+						"JEROEN"
+				),
+				actual = 56
 		)
 	}
 
 	@Test
 	fun binaryGapTest() {
 		val binaryGap =
-			BinaryGap()
+				BinaryGap()
 
 		assertEquals(
-			expected = binaryGap.solution(32),
-			actual = 0
+				expected = binaryGap.solution(32),
+				actual = 0
 		)
 	}
 
 	@Test
 	fun CyclicRotationTest() {
 		val cyclicRotation =
-			CyclicRotation()
+				CyclicRotation()
 
 		assertEquals(
-			expected = cyclicRotation.solution(A = intArrayOf(1, 2, 3, 4), K = 4),
-			actual = intArrayOf(1, 2, 3, 4)
+				expected = cyclicRotation.solution(A = intArrayOf(1, 2, 3, 4), K = 4),
+				actual = intArrayOf(1, 2, 3, 4)
 		)
 
 	}
@@ -423,7 +423,7 @@ class SolutionTest {
 	@Test
 	fun OddOccurrenceInArrayTest() {
 		val oddOccurrenceInArray =
-			OddOccurrenceInArray()
+				OddOccurrenceInArray()
 /*
         val oddOccurrenceInArray =
             OddOccurrenceInArray()
@@ -438,22 +438,22 @@ class SolutionTest {
 */
 
 		assertEquals(
-			expected = oddOccurrenceInArray.solution(
-				A = intArrayOf(
-					1,
-					2,
-					1,
-					3,
-					5,
-					2,
-					3,
-					1,
-					1,
-					2,
-					2
-				)
-			),
-			actual = 5
+				expected = oddOccurrenceInArray.solution(
+						A = intArrayOf(
+								1,
+								2,
+								1,
+								3,
+								5,
+								2,
+								3,
+								1,
+								1,
+								2,
+								2
+						)
+				),
+				actual = 5
 		)
 
 	}
@@ -461,11 +461,11 @@ class SolutionTest {
 	@Test
 	fun FrogJmpTest() {
 		val frogJmp =
-			FrogJmp()
+				FrogJmp()
 
 		assertEquals(
-			expected = frogJmp.solution(X = 0, Y = 0, D = 0),
-			actual = 1
+				expected = frogJmp.solution(X = 0, Y = 0, D = 0),
+				actual = 1
 		)
 
 	}
@@ -473,7 +473,7 @@ class SolutionTest {
 	@Test
 	fun PermMissingElemTest() {
 		val permMissingElem =
-			PermMissingElem()
+				PermMissingElem()
 
 		/**
 		 * intArrayOf(1, 2, 3, 4, 5) actual = 6
@@ -482,8 +482,8 @@ class SolutionTest {
 		 */
 
 		assertEquals(
-			expected = permMissingElem.solution(intArrayOf(1, 2, 3, 4, 5)),
-			actual = 6
+				expected = permMissingElem.solution(intArrayOf(1, 2, 3, 4, 5)),
+				actual = 6
 		)
 
 	}
@@ -491,11 +491,11 @@ class SolutionTest {
 	@Test
 	fun TapeEquilibriumTest() {
 		val tapeEquilibrium =
-			TapeEquilibrium()
+				TapeEquilibrium()
 
 		assertEquals(
-			expected = tapeEquilibrium.solution(intArrayOf(3, 1, 2, 4, 3)),
-			actual = 1
+				expected = tapeEquilibrium.solution(intArrayOf(3, 1, 2, 4, 3)),
+				actual = 1
 		)
 
 	}
@@ -504,8 +504,8 @@ class SolutionTest {
 	fun FrogRiverOneTest() {
 		val frogRiverOne = FrogRiverOne()
 		assertEquals(
-			expected = frogRiverOne.solution(X = 5, A = intArrayOf(1, 3, 1, 4, 2, 3, 1, 4)),
-			actual = -1
+				expected = frogRiverOne.solution(X = 5, A = intArrayOf(1, 3, 1, 4, 2, 3, 1, 4)),
+				actual = -1
 		)
 	}
 
@@ -513,8 +513,8 @@ class SolutionTest {
 	fun PermCheckTest() {
 		val permCheck = PermCheck()
 		assertEquals(
-			expected = permCheck.solution(intArrayOf(1, 2, 3, 4, 6, 6)),
-			actual = 0
+				expected = permCheck.solution(intArrayOf(1, 2, 3, 4, 6, 6)),
+				actual = 0
 		)
 
 		/*  assertEquals(
@@ -527,8 +527,8 @@ class SolutionTest {
 	fun SimpleArraySumTest() {
 		val simpleArraySum = SimpleArraySum()
 		assertEquals(
-			expected = simpleArraySum.solution(ar = arrayOf(1, 2, 3)),
-			actual = 6
+				expected = simpleArraySum.solution(ar = arrayOf(1, 2, 3)),
+				actual = 6
 		)
 	}
 
@@ -536,8 +536,8 @@ class SolutionTest {
 	fun CompareTripletsTest() {
 		val compareTriplets = CompareTriplets()
 		assertSame(
-			expected = compareTriplets.solution(a = arrayOf(5, 6, 7), b = arrayOf(3, 6, 10)),
-			actual = arrayOf(1, 1)
+				expected = compareTriplets.solution(a = arrayOf(5, 6, 7), b = arrayOf(3, 6, 10)),
+				actual = arrayOf(1, 1)
 		)
 	}
 
@@ -545,14 +545,14 @@ class SolutionTest {
 	fun DiagonalDifferenceTest() {
 		val diagonalDifference = DiagonalDifference()
 		assertSame(
-			expected = diagonalDifference.solution(
-				arr = arrayOf(
-					arrayOf(11, 2, 4),
-					arrayOf(4, 5, 6),
-					arrayOf(10, 8, -12)
-				)
-			),
-			actual = 15
+				expected = diagonalDifference.solution(
+						arr = arrayOf(
+								arrayOf(11, 2, 4),
+								arrayOf(4, 5, 6),
+								arrayOf(10, 8, -12)
+						)
+				),
+				actual = 15
 		)
 	}
 
@@ -560,8 +560,8 @@ class SolutionTest {
 	fun ExtraLongFactorialsTest() {
 		val extraLongFactorials = ExtraLongFactorials()
 		assertSame(
-			expected = extraLongFactorials.solution(25),
-			actual = "15511210043330985984000000"
+				expected = extraLongFactorials.solution(25),
+				actual = "15511210043330985984000000"
 		)
 	}
 
@@ -569,11 +569,11 @@ class SolutionTest {
 	fun ClimbingLeaderboardTest() {
 		val climbingLeaderboard = ClimbingLeaderboard()
 		assertSame(
-			expected = climbingLeaderboard.solution(
-				ranked = arrayOf(100, 90, 90, 80),
-				player = arrayOf(70, 80, 105)
-			),
-			actual = arrayOf(4, 3, 1)
+				expected = climbingLeaderboard.solution(
+						ranked = arrayOf(100, 90, 90, 80),
+						player = arrayOf(70, 80, 105)
+				),
+				actual = arrayOf(4, 3, 1)
 		)
 	}
 
@@ -581,8 +581,8 @@ class SolutionTest {
 	fun MaxCountersTest() {
 		val maxCounters = MaxCounters()
 		assertSame(
-			expected = maxCounters.solution(5, intArrayOf(3, 4, 4, 6, 1, 4, 4)),
-			actual = intArrayOf(3, 2, 2, 4, 2)
+				expected = maxCounters.solution(5, intArrayOf(3, 4, 4, 6, 1, 4, 4)),
+				actual = intArrayOf(3, 2, 2, 4, 2)
 		)
 	}
 
@@ -590,8 +590,8 @@ class SolutionTest {
 	fun LonelyIntegerTest() {
 		val lonelyInteger = LonelyInteger()
 		assertEquals(
-			expected = lonelyInteger.solution(arrayOf(1, 2, 3, 4, 3, 2, 1)),
-			actual = 4
+				expected = lonelyInteger.solution(arrayOf(1, 2, 3, 4, 3, 2, 1)),
+				actual = 4
 		)
 	}
 
@@ -599,7 +599,7 @@ class SolutionTest {
 	fun NonDivisibleSubsetTest() {
 		val nonDivisibleSubset = GradingStudents()
 		assertArrayEquals(
-			nonDivisibleSubset.solution(arrayOf(73, 67, 38, 33)), arrayOf(75, 67, 40, 33)
+				nonDivisibleSubset.solution(arrayOf(73, 67, 38, 33)), arrayOf(75, 67, 40, 33)
 		)
 	}
 
@@ -607,8 +607,8 @@ class SolutionTest {
 	fun PassingCarsTest() {
 		val passingCars = PassingCars()
 		assertEquals(
-			expected = passingCars.solution(intArrayOf(0, 1, 0, 1, 1)),
-			actual = 5
+				expected = passingCars.solution(intArrayOf(0, 1, 0, 1, 1)),
+				actual = 5
 		)
 	}
 
@@ -616,8 +616,8 @@ class SolutionTest {
 	fun CountDivTest() {
 		val countDiv = CountDiv()
 		assertEquals(
-			expected = countDiv.solution(A = 6, B = 11, K = 2),
-			actual = 3
+				expected = countDiv.solution(A = 6, B = 11, K = 2),
+				actual = 3
 		)
 	}
 
@@ -625,8 +625,8 @@ class SolutionTest {
 	fun DistinctTest() {
 		val distinct = Distinct()
 		assertEquals(
-			expected = distinct.solution(intArrayOf(2, 1, 1, 2, 3, 1)),
-			actual = 3
+				expected = distinct.solution(intArrayOf(2, 1, 1, 2, 3, 1)),
+				actual = 3
 		)
 	}
 
@@ -642,8 +642,8 @@ class SolutionTest {
 		 */
 		val plusMinus = PlusMinus()
 		assertEquals(
-			expected = plusMinus.solution(arrayOf(-4, 3, -9, 0, 4, 1)),
-			actual = 1
+				expected = plusMinus.solution(arrayOf(-4, 3, -9, 0, 4, 1)),
+				actual = 1
 		)
 	}
 
@@ -651,12 +651,12 @@ class SolutionTest {
 	fun GenomicRangeQueryTest() {
 		val genomicRangeQuery = GenomicRangeQuery()
 		assertEquals(
-			expected = genomicRangeQuery.solution(
-				S = "TC",
-				P = intArrayOf(0, 0, 1),
-				Q = intArrayOf(0, 1, 1)
-			),
-			actual = intArrayOf(4, 2, 2)
+				expected = genomicRangeQuery.solution(
+						S = "TC",
+						P = intArrayOf(0, 0, 1),
+						Q = intArrayOf(0, 1, 1)
+				),
+				actual = intArrayOf(4, 2, 2)
 		)
 	}
 
@@ -664,8 +664,8 @@ class SolutionTest {
 	fun MinAvgTwoSliceTest() {
 		val minAvgTwoSlice = MinAvgTwoSlice()
 		assertEquals(
-			expected = minAvgTwoSlice.solution(intArrayOf(-3, -5, -8, -4, -10)),
-			actual = 2
+				expected = minAvgTwoSlice.solution(intArrayOf(-3, -5, -8, -4, -10)),
+				actual = 2
 		)
 	}
 
@@ -673,13 +673,13 @@ class SolutionTest {
 	fun MaxProductOfThreeTest() {
 		val maxProductOfThree = MaxProductOfThree()
 		assertEquals(
-			expected = maxProductOfThree.solution(intArrayOf(-3, 1, 2, -2, 5, 6)),
-			actual = 60
+				expected = maxProductOfThree.solution(intArrayOf(-3, 1, 2, -2, 5, 6)),
+				actual = 60
 		)
 
 		assertEquals(
-			expected = maxProductOfThree.solution(intArrayOf(-5, -6, -4, -7, -10)),
-			actual = -120
+				expected = maxProductOfThree.solution(intArrayOf(-5, -6, -4, -7, -10)),
+				actual = -120
 		)
 	}
 
@@ -687,17 +687,17 @@ class SolutionTest {
 	fun TriangleTest() {
 		val triangle = Triangle()
 		assertEquals(
-			expected = triangle.solution(intArrayOf(10, 2, 5, 1, 8, 20)),
-			actual = 1
+				expected = triangle.solution(intArrayOf(10, 2, 5, 1, 8, 20)),
+				actual = 1
 		)
 		assertEquals(
-			expected = triangle.solution(intArrayOf(10, 50, 5, 1)),
-			actual = 0
+				expected = triangle.solution(intArrayOf(10, 50, 5, 1)),
+				actual = 0
 		)
 
 		assertEquals(
-			expected = triangle.solution(intArrayOf(Int.MAX_VALUE, Int.MAX_VALUE, Int.MAX_VALUE)),
-			actual = 1
+				expected = triangle.solution(intArrayOf(Int.MAX_VALUE, Int.MAX_VALUE, Int.MAX_VALUE)),
+				actual = 1
 		)
 	}
 
@@ -705,8 +705,8 @@ class SolutionTest {
 	fun NumberOfDiscIntersectionsTest() {
 		val numberOfDiscIntersections = NumberOfDiscIntersections()
 		assertEquals(
-			expected = numberOfDiscIntersections.solution(intArrayOf(1, 2147483647, 0)),
-			actual = 2
+				expected = numberOfDiscIntersections.solution(intArrayOf(1, 2147483647, 0)),
+				actual = 2
 		)
 	}
 
@@ -714,23 +714,23 @@ class SolutionTest {
 	fun BracketsTest() {
 		val brackets = Brackets()
 		assertEquals(
-			expected = brackets.solution("{[()()]}"),
-			actual = 1
+				expected = brackets.solution("{[()()]}"),
+				actual = 1
 		)
 
 		assertEquals(
-			expected = brackets.solution("([)()]"),
-			actual = 0
+				expected = brackets.solution("([)()]"),
+				actual = 0
 		)
 
 		assertEquals(
-			expected = brackets.solution(")("),
-			actual = 0
+				expected = brackets.solution(")("),
+				actual = 0
 		)
 
 		assertEquals(
-			expected = brackets.solution("{{{{"),
-			actual = 0
+				expected = brackets.solution("{{{{"),
+				actual = 0
 		)
 	}
 
@@ -738,16 +738,16 @@ class SolutionTest {
 	fun NestingTest() {
 		val nesting = Nesting()
 		assertEquals(
-			expected = nesting.solution("(()(())())"),
-			actual = 1
+				expected = nesting.solution("(()(())())"),
+				actual = 1
 		)
 		assertEquals(
-			expected = nesting.solution("())"),
-			actual = 0
+				expected = nesting.solution("())"),
+				actual = 0
 		)
 		assertEquals(
-			expected = nesting.solution("((("),
-			actual = 0
+				expected = nesting.solution("((("),
+				actual = 0
 		)
 	}
 
@@ -758,8 +758,8 @@ class SolutionTest {
 		//  H[3] = 7    H[4] = 9    H[5] = 8
 		//  H[6] = 7    H[7] = 4    H[8] = 8
 		assertEquals(
-			expected = stoneWall.solution(intArrayOf(8, 8, 5, 7, 9, 8, 7, 4, 8)),
-			actual = 7
+				expected = stoneWall.solution(intArrayOf(8, 8, 5, 7, 9, 8, 7, 4, 8)),
+				actual = 7
 		)
 	}
 
@@ -770,8 +770,8 @@ class SolutionTest {
 		A[3] = 2    A[4] = 3    A[5] = -1
 		A[6] = 3    A[7] = 3*/
 		assertEquals(
-			expected = dominator.solution(intArrayOf(3, 4, 3, 2, 3, -1, 3, 3)),
-			actual = 3
+				expected = dominator.solution(intArrayOf(3, 4, 3, 2, 3, -1, 3, 3)),
+				actual = 3
 		)
 	}
 
@@ -782,8 +782,75 @@ class SolutionTest {
 		A[3] = 2    A[4] = 3    A[5] = -1
 		A[6] = 3    A[7] = 3*/
 		assertEquals(
-			expected = equiLeader.solution(intArrayOf(4, 3, 4, 4, 4, 2)),
-			actual = 2
+				expected = equiLeader.solution(intArrayOf(4, 3, 4, 4, 4, 2)),
+				actual = 2
+		)
+	}
+
+	@Test
+	fun MaxProfitTest() {
+		val maxProfit = MaxProfit()
+		assertEquals(
+				expected = maxProfit.solution(intArrayOf(23171, 21011, 21123, 21366, 21013, 21367)),
+				actual = 356
+		)
+
+		assertEquals(
+				expected = maxProfit.solution(intArrayOf()),
+				actual = 0
+		)
+
+		assertEquals(
+				expected = maxProfit.solution(intArrayOf(0, 2000000)),
+				actual = 2000000
+		)
+
+		assertEquals(
+				expected = maxProfit.solution(intArrayOf(5, 4, 3, 2, 1)),
+				actual = 0
+		)
+
+		assertEquals(
+				expected = maxProfit.solution(intArrayOf(5, 4, 3, 2, 1)),
+				actual = 0
+		)
+
+		assertEquals(
+				expected = maxProfit.solution(intArrayOf(8, 9, 3, 6, 1, 2)),
+				actual = 3
+		)
+	}
+
+	@Test
+	fun MaxSliceSumTest() {
+		val maxSliceSum = MaxSliceSum()
+		assertEquals(
+				expected = maxSliceSum.solution(intArrayOf(3, 2, -6, 4, 0)),
+				actual = 5
+		)
+
+		assertEquals(
+				expected = maxSliceSum.solution(intArrayOf(-2, 1)),
+				actual = 1
+		)
+
+		assertEquals(
+				expected = maxSliceSum.solution(intArrayOf(10)),
+				actual = 10
+		)
+	}
+
+	@Test
+	fun MaxDoubleSliceSumTest() {
+		val maxDoubleSliceSum = MaxDoubleSliceSum()
+		assertEquals(
+				expected = maxDoubleSliceSum.solution(intArrayOf(3, 2, 6, -1, 4, 5, -1, 2)),
+				actual = 17
+		)
+
+		assertEquals(
+				expected = maxDoubleSliceSum.solution(intArrayOf(0, 10, -5, -2, 0)),
+				actual = 10
 		)
 	}
 }
